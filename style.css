@@ -1,0 +1,61 @@
+body{
+    background-color: #022859;
+}
+
+.hover-radius{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background:rgba(255, 0, 0, 0.2);
+    
+}
+.outer-square{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.inner-square{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+#inner-top{
+    left: 5px;
+}
+
+#inner-bot{
+    left: 5px;
+    top: 10px;
+}
+
+#inner-left{
+    top: 5px;
+}
+
+#inner-right{
+    left: 10px;
+    top: 5px;
+}
+
+#inner-mid{
+    left: 5px;
+    top: 5px;
+}
+
+#pos2{
+    left: 50px;
+}
+
+.padding:hover .outer-square{
+    width: 24px;
+    height: 24px;
+    background-color: (255, 255, 255, 0.2);
+}
