@@ -1,3 +1,6 @@
+html{
+    cursor: url(/icons/spaceShip.svg), auto;
+}
 body{
     background-color: #022859;
 }
@@ -6,8 +9,8 @@ body{
     text-align: center;
     width: 20px;
     height: 20px;
-    padding: 10px;
-    background:rgba(255, 0, 0, 0.2);
+    padding: 30px;
+    /* background:rgba(255, 0, 0, 0.2); */
     
 }
 .outer-square{
@@ -50,12 +53,33 @@ body{
     top: 5px;
 }
 
-#pos2{
-    left: 50px;
+#pos1{
+    position: absolute;
+    left: 20px;
+    top: 20px;
 }
 
-.padding:hover .outer-square{
-    width: 24px;
-    height: 24px;
-    background-color: (255, 255, 255, 0.2);
+#pos2{
+    position: absolute;
+    left: 100px;
+    top: 150px;
 }
+
+#pos3{
+    position: absolute;
+    left: 200px;
+    top: 300px;
+}
+
+#pos4{
+    position: absolute;
+    left: 500px;
+    top: 200px;
+}
+
+#pos5{
+    position: absolute;
+    left: 300px;
+    top: 50px;
+}
+
