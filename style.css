@@ -9,7 +9,7 @@ body{
     text-align: center;
     width: 20px;
     height: 20px;
-    padding: 30px;
+    padding: 100px;
     /* background:rgba(255, 0, 0, 0.2); */
     
 }
@@ -18,8 +18,8 @@ body{
     display: block;
     width: 20px;
     height: 20px;
-
-    background: rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .inner-square{
@@ -81,5 +81,38 @@ body{
     position: absolute;
     left: 300px;
     top: 50px;
+}
+
+#pos6{
+    position: absolute;
+    left: 400px;
+    top: 120px;
+}
+
+#pos7{
+    position: absolute;
+    left: 20px;
+    top: 250px;
+}
+
+#pos8{
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+#pos9{
+    position: absolute;
+    left: 300px;
+    top: 150px;
+}
+#pos10{
+    position: absolute;
+    left: 350px;
+    top: 280px;
+}
+#pos11{
+    position: absolute;
+    left: 200px;
+    top: 180px;
 }
 

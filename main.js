@@ -28,20 +28,27 @@ let allStars = document.querySelectorAll(".hover-radius");
 
 allStars.forEach((star) => {
     // anime.remove(star);
-    function animateStar(scale, duration, elasticity) {
+    function animateStar(scale, duration, easing, delay) {
         anime.remove(star.querySelector(".outer-square"));
         anime({
           targets: star.querySelector(".outer-square"),
-          scale: scale,
+          scale: {
+            value: scale,
+            duration: 100,
+            delay: 1,
+            easing: 'easeInOutQuart'
+          },
           duration: duration,
-          elasticity: elasticity,
-          delay: 100,
-        //   easing: "linear",
-        });
+          // elasticity: elasticity,
+          delay: delay,
+          easing: easing,
+          // background: 'rgb(255, 255, 255)'
+        })
+        .add({targets: allStars,  background: 'rgb(255, 0, 0)'});
     }
 
-function enterStar() { animateStar(2.0, 300, 500) };
-function leaveStar() { animateStar(1.0, 300, 500) };
+function enterStar() { animateStar(2.0,) };
+function leaveStar() { animateStar(1.0,) };
 
 star.addEventListener('mouseenter', enterStar, true);
 star.addEventListener('mouseleave', leaveStar, true);
