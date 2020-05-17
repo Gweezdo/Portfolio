@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: #022859;
+    cursor: url(/icons/spaceShip.svg), auto;
+}
+html{
+    font-size: 62.5%;
+}
+
+@font-face{
+    font-family: 'KarmaticArcade';
+    src: url('/font-styles/ka1.ttf');
+}
+
+@font-face{
+    font-family: 'ArcadeClassic';
+    src: url('/font-styles/ARCADECLASSIC.TTF');
+}
+
+
+
+header {
+    background: #032550;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 3;
+    font-family: ArcadeClassic;
+    font-style: normal;
+    font-size: 32px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#logo{
+    position: relative;
+    /* display: block; */
+    width: auto;
+    height: auto;
+    line-height: 0px;
+    background-color: magenta;
+    padding: 16px 16px 16px 32px;
+}
+
+#logo-z{
+    width: 37px;
+    height: 37px;
+}
+
+#logo:hover{
+    cursor: url(/icons/hand.svg), auto;
+}
+
+#navbar-main{
+    position: relative;
+    /* background-color: darkgoldenrod; */
+    margin-right: 8px;
+    display: block;
+}
+
+.nav-link{
+    position: relative;
+    text-decoration: none;
+    padding: 16px 16px 16px 16px;
+    /* height: 32px; */
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.nav-link:hover{
+    cursor: url(/icons/hand.svg), auto;
+}
+
+.nav-link:active{
+    background: #F27405;
+}
+
+.underline{
+    display: block;
+    height: 4px;
+    width: 0%;
+    background: white;
+}
+
+.underline:hover{
+    width:98%;
+}
+
+
+
+#burger-menu{
+    display: none;
+    background-color: rgb(223, 157, 140);
+    width: 40px;
+    height: 40px;
+    /* padding: 12px 8px 12px 8px; */
+    margin: 8px 8px;
+}
+    
+.menu-line{
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 2.67px;
+    /* line-height: 2.67px; */
+    background-color: #DADADA;
+    /* padding: 2px 16px 2px 16px; */
+    margin: 0;
+    border-radius: 4px;
+    top: 18.67px;
+    left: 7px;
+}
+
+.menu-line::before,
+.menu-line::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #DADADA;
+    border-radius: 4px;
+}
+
+.menu-line::before{
+    top: 6.66px;
+}
+
+.menu-line::after{
+    top: -6.67px;
+}
+
+
+h1{
+    position: relative;
+    color: #FFFFFF;
+    font-family: KarmaticArcade;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 69px;
+    text-align: center;
+    letter-spacing: 1rem;
+    top: 224px;
+}
+
+h2{
+    position: relative;
+    color: #FFFFFF;
+    font-family: ArcadeClassic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 61px;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    top: 224px;
+}
+
+#section1{
+    height: 100vh;
+    /* background: red; */
+}
+
+
+
+
+#box-1{
+    position: relative;
+    display: block;
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 186px;
+    height: 46px;
+    top: 504px;
+    line-height: 46px;
+    left: calc(50% - 186px/2);
+    /* z-index: 0; */
+    /* border-bottom: 1px solid red; */
+    /* opacity: 1; */
+}
+
+#box-1::before,
+#box-1::after{
+    content: '';
+    position: absolute;
+    display: block;
+    
+    background-color: #DADADA;
+    border-radius: 4px;
+}
+
+#box-1::before{
+    top: 100px;
+    width: 110%;
+    height: 100%;
+    left: calc(50% - 186px/2);
+}
+
+#box-1::after{
+    top: -100px;
+    left: calc(50% - 186px/2);
+}
+
+#section2{
+    background: linear-gradient(179.96deg, #022859 0.05%, #5B728E 90.44%), #FFFFFF;
+    height: 100vh;
+}

@@ -1,59 +1,64 @@
-// var shine = anime({
-//     targets: "div.hover-radius",
-//     scale: 2,
-//     easing: "linear",   
-//     delay: 300,
-//     autoplay: false,
-//     // loop: true  
-// });
 
-// document.querySelector('#outer-square').onclick = shine;
-// document.querySelector('#boxes .pause').onclick = playPause.pause;
 
-// let paddingWrapper = document.querySelector(".hover-radius");
 
-// paddingWrapper.addEventListener("mouseenter", (event) => {
-//     anime({
-//         targets: paddingWrapper,
-//         scale: 2,
-//         easing: "linear",   
-//         delay: 300,
-//         duration
-//         // autoplay: false,
-//         // loop: true  
-//     });
-// })
 
-let allStars = document.querySelectorAll(".hover-radius");
+/*******************************
+     NAVBAR ANIMATIONS
+*******************************/
 
-allStars.forEach((star) => {
-    // anime.remove(star);
-    function animateStar(scale, duration, easing, delay) {
-        anime.remove(star.querySelector(".outer-square"));
-        anime({
-          targets: star.querySelector(".outer-square"),
-          scale: {
-            value: scale,
-            duration: 100,
-            delay: 1,
-            easing: 'easeInOutQuart'
-          },
-          duration: duration,
-          // elasticity: elasticity,
-          delay: delay,
-          easing: easing,
-          // background: 'rgb(255, 255, 255)'
-        })
-        .add({targets: allStars,  background: 'rgb(255, 0, 0)'});
+var navLinks = document.getElementsByClassName("nav-link");
+var underlines = document.querySelectorAll(".underline");
+
+console.log(underlines);
+
+
+
+
+
+for (var i = 0; i < underlines.length; i++) {
+
+  
+  function animateLine() {
+    var width = 0;
+    var id = setInterval(function(){frame(i)}, 0.5);
+
+    function frame(index) {
+      if (width >= 98) {
+        clearInterval(id);
+      } else if (width <= 98) {
+        width += 5;
+        // console.log(underlines[i]);
+        underlines[index].style.width = width + "%";
+      }
     }
+  }
 
-function enterStar() { animateStar(2.0,) };
-function leaveStar() { animateStar(1.0,) };
+  function unanimateLine(i) {
+      var width = 98;
+      var id = setInterval(frame, 0.5);
 
-star.addEventListener('mouseenter', enterStar, true);
-star.addEventListener('mouseleave', leaveStar, true);
+      function frame() {
+        if (width <= 0) {
+          clearInterval(id);
+        } else if (width <= 98) {
+          width -= 2;
+          underlines[0].style.width = width + "%";
+        }
+      }
+  }
 
-})
+  
 
+  navLinks[i].addEventListener("mouseenter", animateLine);
+  navLinks[i].addEventListener("mouseleave", unanimateLine);
+}
+
+
+function changeColor(){
+  underlines[0].style.background = "red";
+
+};
+
+navLinks[0].addEventListener("click", changeColor);
 
 
