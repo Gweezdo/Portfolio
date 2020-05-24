@@ -54,236 +54,236 @@ body{
 
 #pos1{
     position: absolute;
-    left: 58px;
-    top: 184px;
+    left: calc(30/1280 * 100%);
+    top: calc(124/1280 * 100%);
 }
 
 #pos2{
     position: absolute;
-    left: 58px;
-    top: 306px;
+    left: calc(48/1280 * 100%);
+    top: calc(200/1280 * 100%);
 }
 
 #pos3{
     position: absolute;
-    left: 58px;
-    top: 375px;
+    left: calc(18/1280 * 100%);
+    top: calc(375/1280 * 100%);
 }
 
 #pos4{
     position: absolute;
-    left: 53px;
-    top: 507px;
+    left: calc(53/1280 * 100%);
+    top: calc(457/1280 * 100%);
 }
 
 #pos5{
     position: absolute;
-    left: 53px;
-    top: 576px;
+    left: calc(23/1280 * 100%);
+    top: calc(576/1280 * 100%);
 }
 
 #pos6{
     position: absolute;
-    left: 123px;
-    top: 168px;
+    left: calc(123/1280 * 100%);
+    top: calc(128/1280 * 100%);
 }
 
 #pos7{
     position: absolute;
-    left: 123px;
-    top: 237px;
+    left: calc(153/1280 * 100%);
+    top: calc(237/1280 * 100%);
 }
 
 #pos8{
     position: absolute;
-    left: 123px;
-    top: 324px;
+    left: calc(123/1280 * 100%);
+    top: calc(324/1280 * 100%);
 }
 
 #pos9{
     position: absolute;
-    left: 128px;
-    top: 431px;
+    left: calc(128/1280 * 100%);
+    top: calc(431/1280 * 100%);
 }
 
 #pos10{
     position: absolute;
-    left: 128px;
-    top: 500px;
+    left: calc(128/1280 * 100%);
+    top: calc(500/1280 * 100%);
 }
 
 #pos11{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(151/1280 * 100%);
+    top: calc(610/1280 * 100%);
 }
 
 #pos12{
     position: absolute;
-    left: 238px;
-    top: 74px;
+    left: calc(238/1280 * 100%);
+    top: calc(74/1280 * 100%)
 }
 
 #pos13{
     position: absolute;
-    left: 305px;
-    top: 179px;
+    left: calc(305/1280 * 100%);
+    top: calc(179/1280 * 100%);
 }
 
 #pos14{
     position: absolute;
-    left: 270px;
-    top: 296px;
+    left: calc(270/1280 * 100%);
+    top: calc(296/1280 * 100%);
 }
 
 #pos15{
     position: absolute;
-    left: 304px;
-    top: 395px;
+    left: calc(304/1280 * 100%);
+    top: calc(395/1280 * 100%);
 }
 
 #pos16{
     position: absolute;
-    left: 275px;
-    top: 548px;
+    left: calc(275/1280 * 100%);
+    top: calc(548/1280 * 100%);
 }
 
 #pos17{
     position: absolute;
-    left: 374px;
-    top: 69px;
+    left: calc(374/1280 * 100%);
+    top: calc(69/1280 * 100%)
 }
 
 #pos18{
     position: absolute;
-    left: 411px;
-    top: 463px;
+    left: calc(411/1280 * 100%);
+    top: calc(463/1280 * 100%);
 }
 
 #pos19{
     position: absolute;
-    left: 494px;
-    top: 154px;
+    left: calc(494/1280 * 100%);
+    top: calc(154/1280 * 100%);
 }
 
 #pos20{
     position: absolute;
-    left: 634px;
-    top: 89px;
+    left: calc(634/1280 * 100%);
+    top: calc(89/1280 * 100%)
 }
 
 #pos21{
     position: absolute;
-    left: 626px;
-    top: 184px;
+    left: calc(626/1280 * 100%);
+    top: calc(184/1280 * 100%);
 }
 
 #pos22{
     position: absolute;
-    left: 775px;
-    top: 119px;
+    left: calc(775/1280 * 100%);
+    top: calc(119/1280 * 100%);
 }
 
 #pos23{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(931/1280 * 100%);
+    top: calc(109/1280 * 100%);
 }
 
 #pos24{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(899/1280 * 100%);
+    top: calc(366/1280 * 100%);
 }
 
 #pos25{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(851/1280 * 100%);
+    top: calc(458/1280 * 100%);
 }
 
 #pos26{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(931/1280 * 100%);
+    top: calc(563/1280 * 100%);
 }
-
+/* next*/
 #pos27{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1092/1280 * 100%);
+    top: calc(174/1280 * 100%);
 }
 
 #pos28{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1014/1280 * 100%);
+    top: calc(311/1280 * 100%);
 }
 
 #pos29{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1112/1280 * 100%);
+    top: calc(351/1280 * 100%);
 }
 
 #pos30{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1055/1280 * 100%);
+    top: calc(463/1280 * 100%);
 }
 
 #pos31{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1216/1280 * 100%);
+    top: calc(149/1280 * 100%);
 }
 
 #pos32{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1260/1280 * 100%);
+    top: calc(199/1280 * 100%);
 }
 
 #pos33{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1201/1280 * 100%);
+    top: calc(256/1280 * 100%);
 }
 
 #pos34{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1260/1280 * 100%);
+    top: calc(268/1280 * 100%);
 }
 
 #pos35{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1201/1280 * 100%);
+    top: calc(394/1280 * 100%);
 }
 
 #pos36{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1191/1280 * 100%);
+    top: calc(483/1280 * 100%);
 }
 
 #pos37{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1143/1280 * 100%);
+    top: calc(583/1280 * 100%);
 }
 
 #pos38{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1205/1280 * 100%);
+    top: calc(590/1280 * 100%);
 }
 
 #pos39{
     position: absolute;
-    left: 151px;
-    top: 610px;
+    left: calc(1205/1280 * 100%);
+    top: calc(659/1280 * 100%);
 }
 
 

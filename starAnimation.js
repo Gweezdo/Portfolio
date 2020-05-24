@@ -1,47 +1,37 @@
-
-
-
-
 var allStars = document.querySelectorAll(".hover-radius");
 var allSquares = document.querySelectorAll(".outer-square");
 
-
-console.log(allStars);
-console.log(allSquares);
-
 allStars.forEach(function(star, index){
     star.addEventListener("mouseenter", function(){
-        shine(index);
-        brightness(index);
+        starGrow(index);
+        starShine(index);
     });
 });
 
 allStars.forEach(function (star, index) {
   star.addEventListener("mouseleave", function () {
-    fade(index);
-    unbrightness(index);
+    starShrink(index);
+    starFade(index);
   });
 });
 
-
-
-function shine(i){
-    var scale = 1;
-    var id = setInterval(function () {
+function starGrow(i) {
+  var scale = 1;
+  var id = setInterval(function () {
     frame(i);
-    }, 0.5);
+  }, 0.5);
 
-    function frame(i) {
+  function frame(i) {
     if (scale >= 1.5) {
-        clearInterval(id);
+      clearInterval(id);
     } else if (scale <= 1.5) {
-        scale += 0.01;
-        allSquares[i].style.transform = "scale(" + scale + ")";
+      scale += 0.01;
+      allSquares[i].style.transform = "scale(" + scale + ")";
     }
-    }
+  }
 };
 
-function fade(i) {
+function starShrink(i) {
   var scale = 1.5;
   var id = setInterval(function () {
     frame(i);
@@ -57,7 +47,7 @@ function fade(i) {
   }
 };
 
-function brightness(i) {
+function starShine(i) {
   var opacity = 0.2;
   var id = setInterval(function () {
     frame(i);
@@ -73,8 +63,7 @@ function brightness(i) {
   }
 };
 
-
-function unbrightness(i) {
+function starFade(i) {
   var opacity = 0.8;
   var id = setInterval(function () {
     frame(i);
