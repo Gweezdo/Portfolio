@@ -9,13 +9,21 @@ navLinks.forEach(function(element, index){
   element.addEventListener("mouseenter", function() {
     lineBrightness(index);
     animateLine(index);
+    
   });
 });
 
 navLinks.forEach(function (element, index) {
   element.addEventListener("mouseleave", function () {
-    lineFade(index);
-    unanimateLine(index);
+    if(element.onclick == true){
+      navLinks[index].addEventListener("click", function () {
+      changeColor(index);});
+    }else{
+      lineFade(index);
+      unanimateLine(index);
+    }
+    
+    
   });
 });
 
@@ -83,12 +91,14 @@ function lineFade(i) {
 
 
 
-// function changeColor(){
-//   underlines[0].style.background = "red";
+function changeColor(i){
+  // underlines[i].style.width = 100 + "%";
+  underlines[i].style.background = "red";
+  
 
-// };
+};
 
-// navLinks[0].addEventListener("click", changeColor);
+
 
 
 /********************************************
@@ -115,4 +125,59 @@ function scrollPage() {
       sect1.style.height = height + "vh";
     }
   }
+}
+
+
+// **************************
+// Close Modal Function 
+// **************************
+
+var closeBtnList = document.getElementsByClassName("modal-btn");
+var modal = document.getElementsByClassName("modal-background");
+// modal[0] = Tribute Page
+// modal[1] = Survey Form
+// modal[2] = Product Landing Page
+// modal[3] = Palindrome Checker
+// modal[4] = Roman Numeral Converter
+// modal[5] =
+// modal[6] =
+// modal[7] =
+// modal[8] =
+// modal[9] =
+// modal[10] = 
+
+
+// This statement closes the modal when the 'close-btn' button is clicked
+Array.from(closeBtnList).forEach((x) => {
+  x.addEventListener("click", closeModal);
+});
+
+// This statement closes the modal when clicking outside the modal window
+window.addEventListener('click', clickOutside);
+
+
+function closeModal() {
+  modal[0].style.display = "none";
+  modal[1].style.display = "none";
+  modal[2].style.display = "none";
+  modal[3].style.display = "none";
+  modal[4].style.display = "none";
+  
+}
+
+function clickOutside(e){
+  if (
+    e.target == modal[0] ||
+    e.target == modal[1] ||
+    e.target == modal[2] ||
+    e.target == modal[3] ||
+    e.target == modal[4] // Remember to add || pipe symbol
+  ) {
+    modal[0].style.display = "none";
+    modal[1].style.display = "none";
+    modal[2].style.display = "none";
+    modal[3].style.display = "none";
+    modal[4].style.display = "none";
+  }
+  
 }

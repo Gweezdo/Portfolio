@@ -1,0 +1,182 @@
+/********************************************
+     Modal visibility ON/OFF switches
+********************************************/
+
+.modal-background{
+    /* display: none; */
+}
+
+#tribute-page-modal{
+    display: none;
+    /* display: block; */
+}
+
+#survey-form-modal{
+    display: none;
+    /* display: block; */
+}
+
+#product-page-modal{
+    display: none;
+    /* display: block; */
+}
+
+#palindrome-checker-modal{
+    display: none;
+    /* display: block; */
+}
+
+#romanNumeral-converter-modal{
+    display: none;
+    /* display: block; */
+}
+
+/* add this code to body with js once modal is opened to prevent background from scrolling */
+/* body{
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+} */
+
+.modal-background{
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: rgba(2,40,89, 0.8);
+    /* opacity: 0.8; */
+}
+
+.modal{
+    position: absolute;
+    width: 600px;
+    height: 657px;
+    background: #001228;
+    border: none;
+    border-radius: 40px;
+    left:calc(50% - 600px/2);
+    top: calc(50% - 657px/2);
+    opacity:1;
+    font-family: ArcadeClassic;
+    
+    color: #FFFFFF;
+}
+
+.modal-header h4{
+    
+    font-size: 30px;
+    line-height: 30px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    /* background: red; */
+    margin: 32px 32px 0 32px;
+    padding: 0 0 15px 0;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.modal-header hr{
+    margin: 0 32px 15px 32px;
+}
+
+.modal-header hr,
+.modal-footer hr{
+    height: 2px;
+    background-color: #05C7F2;
+    border-color: #05C7F2;
+}
+
+.modal-body{
+    margin: 0 32px 15px 32px;
+    height: 452px;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    /* background: orange; */
+}
+
+.modal-body h5{
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.3rem;
+    font-weight: normal;
+    padding-top: 16px;
+}
+
+.modal-body p{
+    font-family: Robotto Mono;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.2rem;
+    font-weight: normal;
+    font-weight: 500;
+}
+
+/* Custom scrollbar style */
+/* width */
+.modal-body::-webkit-scrollbar {
+  width: 10px; 
+}
+
+/* Track */
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.modal-body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb{
+    height: 50px;
+}
+
+.modal-footer{
+    margin: 0 32px;
+    /* background: red; */
+    font-family: ArcadeClassic;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.modal-btn{
+    font-family: ArcadeClassic;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    float: right;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.3rem;
+    border: none;
+    cursor: url(/icons/hand.svg), auto;
+}
+
+.view-project-btn{
+    color: #001228;
+    background: #FFFFFF;
+    margin: 22px 0 0 16px;
+    padding: 11px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.close-btn{
+    background: #001228;
+    color: #FFFFFF;
+    margin: 33px 0 0 0;
+    padding-right: 16px;
+}
+
+

@@ -32,7 +32,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    z-index: 99;
+    z-index: 4;
     font-family: ArcadeClassic;
     font-style: normal;
     font-size: 32px;
@@ -78,7 +78,7 @@ header {
 
 
 .nav-link:active{
-    background: #F27405;
+    /* background: #F27405; */
 }
 
 .underline{
@@ -88,9 +88,11 @@ header {
     background: rgba(255, 255, 255, 1);
 }
 
-.underline:hover{
-    width:98%;
+.underline:visited{
+    width: 98%;
 }
+
+
 
 
 
@@ -169,7 +171,7 @@ h2{
     letter-spacing: 0.1rem;
 }
 
-#section1{
+.section1{
     height: 100%;
     overflow: hidden;
     margin: 0;
@@ -201,12 +203,12 @@ h2{
      SECTION 2 - Title and navbar
 *********************************/
 
-#section2{
+.section2{
     background: linear-gradient(179.96deg, #022859 0.05%, #5B728E 90.44%), #FFFFFF;
     height: 100vh;
     font-family: ArcadeClassic;
     color: #FFFFFF;
-    padding: 0 32px 0 32px;
+    padding: 80px 32px 0 32px;
     font-style: normal;
     font-weight: normal;
 }
@@ -287,6 +289,7 @@ h2{
     /* background: red; */
     height: 680px;
     overflow: hidden;
+    cursor: url(/icons/hand.svg), auto;
 }
 
 .grid-item-sect2{
