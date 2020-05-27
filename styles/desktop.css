@@ -185,6 +185,7 @@ h2{
     position: relative;
     display: block;
     text-align: center;
+    cursor: url(/icons/hand.svg), auto;
 }
 
 #start-btn{
@@ -205,12 +206,13 @@ h2{
 
 .section2{
     background: linear-gradient(179.96deg, #022859 0.05%, #5B728E 90.44%), #FFFFFF;
-    height: 100vh;
+    height: auto;
     font-family: ArcadeClassic;
     color: #FFFFFF;
     padding: 80px 32px 0 32px;
     font-style: normal;
     font-weight: normal;
+    
 }
 
 #sect2-h3{
@@ -277,13 +279,14 @@ h2{
      SECTION 2 - Card grid
 *********************************/
 
-.grid-container-sect2{
+#grid-container-sect2{
     display: grid;
     position: relative;
     grid-column-gap: 32px;
     grid-row-gap: 32px;
     grid-template-columns: auto auto auto;
     margin-top: 80px;
+    /* margin-bottom: 30px; */
     padding: 16px 16px;
     /* left: 0; */
     /* background: red; */
@@ -313,6 +316,9 @@ h2{
     width: 186px;
     height: 46px;
     left: calc(50% - 186px/2);
+    display: block;
+    /* padding: 30px 30px; */
+    position: relative;
 }
 
 .sect2-h4{

@@ -31,6 +31,16 @@
     /* display: block; */
 }
 
+#ceasars-cipher-modal{
+    display: none;
+    /* display: block; */
+}
+
+#phoneNumber-validator-modal{
+    display: none;
+    /* display: block; */
+}
+
 /* add this code to body with js once modal is opened to prevent background from scrolling */
 /* body{
     position: fixed;

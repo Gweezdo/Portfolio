@@ -181,3 +181,41 @@ function clickOutside(e){
   }
   
 }
+
+// **************************
+// Open Modal Function 
+// **************************
+
+var allCards = document.querySelectorAll(".grid-item-sect2");
+
+
+
+allCards.forEach(function (card, index) {
+  card.addEventListener("click", function () {
+    displayModal(index);
+  });
+});
+
+function displayModal(index) {
+  for(var i = 0; i < allCards.length; i++){
+    if(i === index){
+      modal[i].style.display = "block";
+    }else{
+      modal[i].style.display = "none";
+    }
+  }
+}
+
+/********************************************
+     LOAD BUTTON - HEIGHT CHANGE ANIMATIONS
+********************************************/
+
+var loadMoreBtn = document.getElementById("load-btn");
+var gridContainerSect2 = document.getElementById("grid-container-sect2");
+
+loadMoreBtn.addEventListener("click", loadMore);
+
+function loadMore(){
+  gridContainerSect2.style.height = "auto";
+  loadMoreBtn.style.display = "none";
+};
