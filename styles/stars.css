@@ -234,13 +234,15 @@ body{
 
 #pos31{
     position: absolute;
-    left: calc(1216/1280 * 100%);
+    /* left: calc(1216/1280 * 100%); */
+    left: 50%;
     top: calc(149/1280 * 100%);
 }
 
 #pos32{
     position: absolute;
-    left: calc(1260/1280 * 100%);
+    /* left: calc(1260/1280 * 100%); */
+    left: 50%;
     top: calc(199/1280 * 100%);
 }
 
@@ -252,7 +254,8 @@ body{
 
 #pos34{
     position: absolute;
-    left: calc(1260/1280 * 100%);
+    /* left: calc(1260/1280 * 100%); */
+    left: 50%;
     top: calc(268/1280 * 100%);
 }
 

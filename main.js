@@ -132,54 +132,31 @@ function scrollPage() {
 // Close Modal Function 
 // **************************
 
-var closeBtnList = document.getElementsByClassName("modal-btn");
+var closeBtnList = document.querySelectorAll(".close-btn");
 var modal = document.getElementsByClassName("modal-background");
-// modal[0] = Tribute Page
-// modal[1] = Survey Form
-// modal[2] = Product Landing Page
-// modal[3] = Palindrome Checker
-// modal[4] = Roman Numeral Converter
-// modal[5] =
-// modal[6] =
-// modal[7] =
-// modal[8] =
-// modal[9] =
-// modal[10] = 
 
-
-// This statement closes the modal when the 'close-btn' button is clicked
-Array.from(closeBtnList).forEach((x) => {
-  x.addEventListener("click", closeModal);
+closeBtnList.forEach(function (btn, index) {
+  btn.addEventListener("click", function () {
+    closeModal(index);
+  });
 });
 
-// This statement closes the modal when clicking outside the modal window
-window.addEventListener('click', clickOutside);
-
-
-function closeModal() {
-  modal[0].style.display = "none";
-  modal[1].style.display = "none";
-  modal[2].style.display = "none";
-  modal[3].style.display = "none";
-  modal[4].style.display = "none";
-  
+function closeModal(index) {
+  for (var i = 0; i < closeBtnList.length; i++) {
+    if (i === index) {
+      modal[i].style.display = "none";
+    } 
+  }
 }
 
+// This closes the modal when click anywhere outside the modal window
+window.addEventListener('click', clickOutside);
 function clickOutside(e){
-  if (
-    e.target == modal[0] ||
-    e.target == modal[1] ||
-    e.target == modal[2] ||
-    e.target == modal[3] ||
-    e.target == modal[4] // Remember to add || pipe symbol
-  ) {
-    modal[0].style.display = "none";
-    modal[1].style.display = "none";
-    modal[2].style.display = "none";
-    modal[3].style.display = "none";
-    modal[4].style.display = "none";
+  for (var i = 0; i<modal.length; i++){
+    if (e.target == modal[i]) {
+      modal[i].style.display = "none";
+    }
   }
-  
 }
 
 // **************************
@@ -187,8 +164,6 @@ function clickOutside(e){
 // **************************
 
 var allCards = document.querySelectorAll(".grid-item-sect2");
-
-
 
 allCards.forEach(function (card, index) {
   card.addEventListener("click", function () {

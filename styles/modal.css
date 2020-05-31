@@ -48,6 +48,11 @@
     height: 100%;
 } */
 
+@font-face{
+    font-family: 'RobottoMono';
+    src: url('/font-styles/RobotoMono-Regular.ttf');
+}
+
 .modal-background{
     position: fixed;
     z-index: 5;
@@ -118,8 +123,8 @@
     padding-top: 16px;
 }
 
-.modal-body p{
-    font-family: Robotto Mono;
+.modal-body > p{
+    font-family: RobottoMono;
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0.2rem;
