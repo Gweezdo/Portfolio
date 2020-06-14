@@ -266,7 +266,7 @@ h2{
 
 .nav-link-sect2::after{
     width: 100%;
-    background: #F27405;
+    /* background: #F27405; */
     visibility: visible;
 }
 
