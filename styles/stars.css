@@ -53,7 +53,7 @@ body{
 }
 
 #pos1{
-    position: absolute;
+    position: relative;
     left: calc(30/1280 * 100%);
     top: calc(124/1280 * 100%);
 }
