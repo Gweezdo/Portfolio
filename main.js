@@ -4,28 +4,35 @@
 
 var navLinks = document.querySelectorAll(".nav-link");
 var underlines = document.querySelectorAll(".underline");
+var navIndex = 0;
 
 navLinks.forEach(function(element, index){
   element.addEventListener("mouseenter", function() {
     lineBrightness(index);
     animateLine(index);
-    
   });
+  element.addEventListener("click", function () {
+      // navIndex = index;
+      changeColor(index);
+  });
+
 });
 
 navLinks.forEach(function (element, index) {
-  element.addEventListener("mouseleave", function () {
-    if(element.onclick == true){
-      navLinks[index].addEventListener("click", function () {
-      changeColor(index);});
-    }else{
+    element.addEventListener("mouseleave", function () {
       lineFade(index);
       unanimateLine(index);
-    }
-    
-    
-  });
+    });
+  if(index == navIndex){
+    return;
+  }else{}
+  
 });
+
+function changeColor(i){
+  underlines[i].style.width = 100 + "%";
+  underlines[i].style.background = "red";
+};
 
 function animateLine(i) {
   var width = 0;
@@ -89,14 +96,19 @@ function lineFade(i) {
 };
   
 
+/**********************************
+     NAVBAR UNDERLINES CHANGE COLOR - Section 1
+**********************************/
 
 
-function changeColor(i){
-  // underlines[i].style.width = 100 + "%";
-  underlines[i].style.background = "red";
-  
+// navLinks.forEach(function (element, index) {
+//   element.addEventListener("click", function () {
+//     changeColor(index);
+//   }, true);
+// });
 
-};
+
+
 
 
 
@@ -106,26 +118,77 @@ function changeColor(i){
 ********************************************/
 
 
-var startBtnSect1 = document.getElementById("start-btn");
-var sect1 = document.getElementById("section1");
+// var startBtnSect1 = document.getElementById("start-btn");
+// var sect1 = document.getElementById("section1");
 
-startBtnSect1.addEventListener('click', scrollPage);
+// startBtnSect1.addEventListener('click', scrollPage);
 
-function scrollPage() {
-  var height = 100;
-  var id = setInterval(function () {
-    frame();
-  }, 0.5);
+// function scrollPage() {
+//   var height = 100;
+//   var id = setInterval(function () {
+//     frame();
+//   }, 0.5);
 
-  function frame() {
-    if (height >= 200) {
-      clearInterval(id);
-    } else if (height <= 200) {
-      height += 5;
-      sect1.style.height = height + "vh";
-    }
-  }
+//   function frame() {
+//     if (height >= 200) {
+//       clearInterval(id);
+//     } else if (height <= 200) {
+//       height += 5;
+//       sect1.style.height = height + "vh";
+//     }
+//   }
+// }
+
+
+function getElementY(query) {
+  return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
 }
+console.log("pageYOffset = " + window.pageYOffset);
+console.log("(#work).getBoundingClientRect.top = " + document.querySelector("#work").getBoundingClientRect().top
+);
+
+function doScrolling(element, duration) {
+	var startingY = window.pageYOffset
+  var elementY = getElementY(element)
+  // If element is close to page's bottom then window will scroll only to some position above the element.
+  var targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY
+	var diff = targetY - startingY
+  // Easing function: easeInOutCubic
+  // From: https://gist.github.com/gre/1650294
+  var easing = function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 }
+  var start
+
+  if (!diff) return
+
+	// Bootstrap our animation - it will get called right before next frame shall be rendered.
+	window.requestAnimationFrame(function step(timestamp) {
+    if (!start) start = timestamp
+    // Elapsed miliseconds since start of scrolling.
+    var time = timestamp - start
+		// Get percent of completion in range [0, 1].
+    var percent = Math.min(time / duration, 1)
+    // Apply the easing.
+    // It can cause bad-looking slow frames in browser performance tool, so be careful.
+    percent = easing(percent)
+
+    window.scrollTo(0, startingY + diff * percent)
+
+		// Proceed with animation as long as we wanted it to.
+    if (time < duration) {
+      window.requestAnimationFrame(step)
+    }
+  })
+}
+
+// Apply event handlers. Example of firing the scrolling mechanism.
+document.getElementById("start-btn").addEventListener("click", doScrolling.bind(null, "#work", 2000));
+
+
+// Or simply:
+//doScrolling('#mytarget', 1000)
+
+
+
 
 
 // **************************
@@ -194,3 +257,11 @@ function loadMore(){
   gridContainerSect2.style.height = "auto";
   loadMoreBtn.style.display = "none";
 };
+
+
+/************************************************
+     NAVBAR UNDERLINES CHANGE COLOR - SECTION 2
+************************************************/
+
+var navLinksS2 = document.querySelectorAll(".nav-link-sect2");
+

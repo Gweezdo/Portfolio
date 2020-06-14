@@ -262,11 +262,18 @@ h2{
     transition-delay: 0s;
 }
 
+.nav-link-sect2::after{
+    width: 100%;
+    background: #F27405;
+    visibility: visible;
+}
+
 .nav-link-sect2:active:after{
     background: #F27405;
     opacity: 1;
     width: 100%;
     visibility: visible;
+    
 }
 
 

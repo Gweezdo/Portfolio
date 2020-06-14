@@ -104,6 +104,7 @@ body{
     position: absolute;
     left: calc(128/1280 * 100%);
     top: calc(431/1280 * 100%);
+    transform: scale(1.5);
 }
 
 #pos10{
@@ -121,7 +122,8 @@ body{
 #pos12{
     position: absolute;
     left: calc(238/1280 * 100%);
-    top: calc(74/1280 * 100%)
+    top: calc(74/1280 * 100%);
+    transform: scale(1.5);
 }
 
 #pos13{
@@ -146,6 +148,7 @@ body{
     position: absolute;
     left: calc(275/1280 * 100%);
     top: calc(548/1280 * 100%);
+    transform: scale(1.5);
 }
 
 #pos17{
@@ -158,6 +161,7 @@ body{
     position: absolute;
     left: calc(411/1280 * 100%);
     top: calc(463/1280 * 100%);
+    transform: scale(1.5);
 }
 
 #pos19{
@@ -182,6 +186,7 @@ body{
     position: absolute;
     left: calc(775/1280 * 100%);
     top: calc(119/1280 * 100%);
+    transform: scale(1.5);
 }
 
 #pos23{
@@ -194,6 +199,7 @@ body{
     position: absolute;
     left: calc(899/1280 * 100%);
     top: calc(366/1280 * 100%);
+    
 }
 
 #pos25{
@@ -206,8 +212,9 @@ body{
     position: absolute;
     left: calc(931/1280 * 100%);
     top: calc(563/1280 * 100%);
+    transform: scale(1.5);
 }
-/* next*/
+
 #pos27{
     position: absolute;
     left: calc(1092/1280 * 100%);
@@ -224,6 +231,7 @@ body{
     position: absolute;
     left: calc(1112/1280 * 100%);
     top: calc(351/1280 * 100%);
+    transform: scale(1.5);
 }
 
 #pos30{
@@ -250,6 +258,7 @@ body{
     position: absolute;
     left: calc(1201/1280 * 100%);
     top: calc(256/1280 * 100%);
+    transform: scale(1.5);
 }
 
 #pos34{
@@ -263,6 +272,7 @@ body{
     position: absolute;
     left: calc(1201/1280 * 100%);
     top: calc(394/1280 * 100%);
+    
 }
 
 #pos36{
