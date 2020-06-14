@@ -53,8 +53,8 @@ body{
 }
 
 #pos1{
-    position: relative;
-    left: calc(30/1280 * 100%);
+    position: absolute;
+    left: calc(30/1280 * 100vw);
     top: calc(124/1280 * 100%);
 }
 
@@ -242,60 +242,60 @@ body{
 
 #pos31{
     position: absolute;
-    /* left: calc(1216/1280 * 100%); */
-    left: 50%;
+    left: calc(1216/1280 * 100vw);
+    /* left: 50%; */
     top: calc(149/1280 * 100%);
+    background-color: red;
 }
 
 #pos32{
     position: absolute;
-    /* left: calc(1260/1280 * 100%); */
-    left: 50%;
+    left: calc(1260/1280 * 100vw);
+    /* left: 50%; */
     top: calc(199/1280 * 100%);
 }
 
 #pos33{
     position: absolute;
-    left: calc(1201/1280 * 100%);
+    left: calc(1201/1280 * 100vw);
     top: calc(256/1280 * 100%);
     transform: scale(1.5);
 }
 
 #pos34{
     position: absolute;
-    /* left: calc(1260/1280 * 100%); */
-    left: 50%;
+    left: calc(1260/1280 * 100vw);
     top: calc(268/1280 * 100%);
 }
 
 #pos35{
     position: absolute;
-    left: calc(1201/1280 * 100%);
+    left: calc(1201/1280 * 100vw);
     top: calc(394/1280 * 100%);
     
 }
 
 #pos36{
     position: absolute;
-    left: calc(1191/1280 * 100%);
+    left: calc(1191/1280 * 100vw);
     top: calc(483/1280 * 100%);
 }
 
 #pos37{
     position: absolute;
-    left: calc(1143/1280 * 100%);
+    left: calc(1143/1280 * 100vw);
     top: calc(583/1280 * 100%);
 }
 
 #pos38{
     position: absolute;
-    left: calc(1205/1280 * 100%);
+    left: calc(1205/1280 * 100vw);
     top: calc(590/1280 * 100%);
 }
 
 #pos39{
     position: absolute;
-    left: calc(1205/1280 * 100%);
+    left: calc(1205/1280 * 100vw);
     top: calc(659/1280 * 100%);
 }
 
