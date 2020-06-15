@@ -54,7 +54,7 @@ body{
 
 #pos1{
     position: absolute;
-    left: calc(30/1280 * 100vw);
+    left: calc(30/1280 * 100%);
     top: calc(124/1280 * 100%);
     transform: scale(0.5);
 }

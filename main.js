@@ -31,7 +31,7 @@ navLinks.forEach(function (element, index) {
 
 function changeColor(i){
   underlines[i].style.width = 100 + "%";
-  underlines[i].style.background = "red";
+  underlines[i].style.background = "#F27405";
 };
 
 function animateLine(i) {

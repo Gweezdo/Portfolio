@@ -43,20 +43,23 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-#logo{
+#logo > a {
     position: relative;
-    /* display: block; */
-    width: auto;
+    display: block;
+    width: 30px;
     height: auto;
     line-height: 0px;
     /* background-color: magenta; */
-    padding: 16px 16px 16px 32px;
+    padding: 16px 16px 16px 10px;
+    margin-left: 22px;
     cursor: url(/icons/hand.svg), auto;
 }
 
 #logo-z{
     width: 37px;
-    height: 37px;
+    height: 36px;
+    /* cursor: url(/icons/hand.svg), auto; */
+    /* background-color: #04C1FF; */
 }
 
 
@@ -208,7 +211,8 @@ h2{
 *********************************/
 
 .section2{
-    background: linear-gradient(179.96deg, #022859 0.05%, #5B728E 90.44%), #FFFFFF;
+    /* background: linear-gradient(179.96deg, #022859 0.05%, #5B728E 90.44%), #FFFFFF; */
+    background: linear-gradient(179.96deg, #022859 0.05%, #5FA0F0 90.44%), #FFFFFF;
     height: auto;
     font-family: ArcadeClassic;
     color: #FFFFFF;
@@ -349,8 +353,8 @@ h2{
     align-items: center;
     text-align: center;
     letter-spacing: 0.2rem;
-    padding: 32px; 
-    margin: 0 32px;
+    padding: 0px; 
+    margin: 16px 32px;
     /* background: rosybrown; */
 }
 
@@ -362,6 +366,49 @@ h2{
     line-height: 32px;
     padding: 10px 32px;
     color: #FFFFFF;
+    position: relative;
+    height: 150px;
+    /* background-color: aqua; */
+    text-align: center;
+}
+
+.all-badges-container{
+    display: flex;
+    /* background-color: #F27405; */
+    position: relative;
+    width: auto;
+    height: 60px;
+    float: right;
+    margin: 5px 32px 32px 0;
+    padding: 0;
+    
+}
+
+.badge-container{
+    position: relative;
+    display: block;
+    padding: 0 5px;
+    text-align: center;
+    /* background-color: red; */
+    /* left: calc(50% - 40px/2) */
+}
+
+.badge-container{
+    /* background-color: #04C1FF; */
+    width: 40px;
+    height: 40px;
+}
+
+.badge-container > p{
+    font-family: RobottoMono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 160%;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -375,4 +422,28 @@ h2{
   .grid-container-sect2 {
     grid-template-columns: auto;
   }
+}
+
+
+/*********************************
+     SECTION 3 - Title
+*********************************/
+
+.section3{
+    background: linear-gradient(180deg, #5FA0F0 0%, #67A8F8 100%);
+    height: auto;
+    font-family: ArcadeClassic;
+    color: #001228;
+    padding: 80px 32px 32px 32px;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    
+}
+
+#sect3-h3{
+    position: relative;
+    font-size: 60px;
+    line-height: 61px;
+    letter-spacing: 1rem;
 }

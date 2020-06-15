@@ -154,7 +154,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-    height: 50px;
+    height: 10px;
 }
 
 .modal-footer{
