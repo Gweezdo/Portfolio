@@ -447,3 +447,73 @@ h2{
     line-height: 61px;
     letter-spacing: 1rem;
 }
+
+.section3 p{
+    font-family: RobottoMono;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+}
+
+
+/*********************************
+     SECTION 3 - Card grid
+*********************************/
+
+#grid-container-sect3{
+    display: grid;
+    position: relative;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 80px;
+    /* margin-bottom: 30px; */
+    padding: 16px 16px;
+    /* left: 0; */
+    background: red;
+    height: 300px;
+    overflow: hidden;
+    cursor: url(/icons/hand.svg), auto;
+}
+
+.grid-item-sect3{
+    position: relative;
+    height: 200px;
+}
+
+/* .grid-item-sect3:hover{
+    border: solid #F27405 3px;
+} */
+
+.sect3-logo-cont-top{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+img.sect3-logo{
+    position: relative;
+    width: 221px;
+    height: 47px;
+    top: calc(50% - 47px/2);
+    /* background-color: #F27405; */
+}
+
+.sect3-logo-cont-bot{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    padding: 30px 0 0 0;
+}
+
