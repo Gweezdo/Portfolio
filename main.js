@@ -1,5 +1,5 @@
 /*******************************
-     NAVBAR ANIMATIONS
+     NAVBAR SECTION 1 ANIMATIONS
 *******************************/
 
 var navLinks = document.querySelectorAll(".nav-link");
@@ -117,29 +117,6 @@ function lineFade(i) {
      START BUTTON - SCROLL DOWN ANIMATIONS
 ********************************************/
 
-
-// var startBtnSect1 = document.getElementById("start-btn");
-// var sect1 = document.getElementById("section1");
-
-// startBtnSect1.addEventListener('click', scrollPage);
-
-// function scrollPage() {
-//   var height = 100;
-//   var id = setInterval(function () {
-//     frame();
-//   }, 0.5);
-
-//   function frame() {
-//     if (height >= 200) {
-//       clearInterval(id);
-//     } else if (height <= 200) {
-//       height += 5;
-//       sect1.style.height = height + "vh";
-//     }
-//   }
-// }
-
-
 function getElementY(query) {
   return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
 }
@@ -187,6 +164,77 @@ document.getElementById("start-btn").addEventListener("click", doScrolling.bind(
 // Or simply:
 //doScrolling('#mytarget', 1000)
 
+
+
+/*******************************
+     NAVBAR SECTION 2 FILTER
+*******************************/
+
+var allCardList = document.querySelectorAll(".grid-item-sect2")
+var htmlCardList = document.querySelectorAll(".html-css-card");
+var jsCardList = document.querySelectorAll(".js-card");
+var pythonCardList = document.querySelectorAll(".python-card");
+
+var allNav = document.getElementById("all-nav");
+var htmlNav = document.getElementById("html-nav");
+var jsNav = document.getElementById("js-nav");
+var pythonNav = document.getElementById("python-nav");
+
+allNav.addEventListener("click", );
+htmlNav.addEventListener("click",);
+jsNav.addEventListener("click",);
+pythonNav.addEventListener("click",);
+
+
+// I need to write a function1 that adds the "display: block" property to a list of items
+// I need to write another function2 that adds the "display: none" property to a list of items
+// I need to write a function3 that encorporates both func1 and func2 (remember to remove the load more button aswell)
+
+/***************/
+// function1
+/***************/
+/*
+
+def displayBlock(list){
+  iterate over list (for loop, map function, for each)
+  set the style of each item
+  list[i].style.display = "block"
+}
+
+*/
+
+function displayBlock(){
+  this.style.display = "block";
+}
+
+/***************/
+// function2
+/***************/
+/*
+
+def displayNone(list){
+  iterate over list (for loop, map function, for each)
+  set the style of each item
+  list[i].style.display = "none"
+}
+
+*/
+
+function displayNone(){
+  this.style.display = "none";
+}
+
+/***************/
+// function3
+/***************/
+/*
+
+get list of all elements
+iterate through list
+if list element === the element you want to show add function 1 (displayBlock) to it
+else if list element != the element you want to show add function 2 (displayNone) to it 
+
+*/
 
 
 

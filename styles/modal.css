@@ -48,6 +48,10 @@
     height: 100%;
 } */
 
+/*********************************
+     SECTION 2 - WORK CARD MODAL
+*********************************/
+
 @font-face{
     font-family: 'RobottoMono';
     src: url('/font-styles/RobotoMono-Regular.ttf');
@@ -194,4 +198,8 @@
     padding-right: 16px;
 }
 
+
+/***********************************
+     SECTION 3 - CERTIFICATE MODAL
+***********************************/
 

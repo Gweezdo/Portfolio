@@ -290,6 +290,18 @@ h2{
     opacity: 1;
 }
 
+/***/
+
+.python-card{
+    display: none;
+}
+
+
+
+/***/
+
+
+
 /*********************************
      SECTION 2 - Card grid
 *********************************/
@@ -307,10 +319,10 @@ h2{
     /* background: red; */
     height: 680px;
     overflow: hidden;
-    cursor: url(/icons/hand.svg), auto;
 }
 
 .grid-item-sect2{
+    cursor: url(/icons/hand.svg), auto;
     position: relative;
     background-color: #001228;
     border-radius: 40px;
@@ -412,14 +424,14 @@ h2{
 }
 
 @media screen and (max-width: 900px) {
-  .grid-container-sect2 {
+  #grid-container-sect2 {
     grid-template-columns: auto auto;
   }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .grid-container-sect2 {
+  #grid-container-sect2 {
     grid-template-columns: auto;
   }
 }
@@ -457,6 +469,19 @@ h2{
     letter-spacing: 0.1em;
 }
 
+#my-certificates h4, 
+#my-journey h4{
+    /* font-family: ArcadeClassic; */
+    /* font-style: normal; */
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.2rem;
+    color: #001228;
+    padding: 16px 0 0 0;
+    /* background-color: #F27405; */
+}
+
 
 /*********************************
      SECTION 3 - Card grid
@@ -468,19 +493,20 @@ h2{
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: auto auto auto auto;
-    margin-top: 80px;
+    /* margin-top: 0px; */
     /* margin-bottom: 30px; */
     padding: 16px 16px;
     /* left: 0; */
-    background: red;
-    height: 300px;
+    /* background: red; */
+    height: 600px;
     overflow: hidden;
-    cursor: url(/icons/hand.svg), auto;
 }
 
 .grid-item-sect3{
+    cursor: url(/icons/hand.svg), auto;
     position: relative;
     height: 200px;
+    padding: 10px 10px;
 }
 
 /* .grid-item-sect3:hover{
@@ -516,4 +542,12 @@ img.sect3-logo{
     text-align: center;
     padding: 30px 0 0 0;
 }
+
+.sect3-logo-cont-bot p{
+    padding: 0 10px;
+}
+
+/*********************************
+     SECTION 4 - Title
+*********************************/
 
