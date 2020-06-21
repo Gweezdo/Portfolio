@@ -292,9 +292,7 @@ h2{
 
 /***/
 
-.python-card{
-    display: none;
-}
+
 
 
 
@@ -330,6 +328,7 @@ h2{
     height: 297px;
     padding: 10px 10px;
     border: solid #001228 3px;
+    /* display: block; */
 }
 
 /* #card-default{

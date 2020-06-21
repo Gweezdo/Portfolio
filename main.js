@@ -166,11 +166,12 @@ document.getElementById("start-btn").addEventListener("click", doScrolling.bind(
 
 
 
+
 /*******************************
      NAVBAR SECTION 2 FILTER
 *******************************/
 
-var allCardList = document.querySelectorAll(".grid-item-sect2")
+var allCardList = document.querySelectorAll(".grid-item-sect2");
 var htmlCardList = document.querySelectorAll(".html-css-card");
 var jsCardList = document.querySelectorAll(".js-card");
 var pythonCardList = document.querySelectorAll(".python-card");
@@ -180,64 +181,52 @@ var htmlNav = document.getElementById("html-nav");
 var jsNav = document.getElementById("js-nav");
 var pythonNav = document.getElementById("python-nav");
 
-allNav.addEventListener("click", );
-htmlNav.addEventListener("click",);
-jsNav.addEventListener("click",);
-pythonNav.addEventListener("click",);
+allNav.addEventListener("click", () => func3(allCardList));
+htmlNav.addEventListener("click", () => func3(htmlCardList));
+jsNav.addEventListener("click", () => func3(jsCardList));
+pythonNav.addEventListener("click", () => func3(pythonCardList));
 
 
-// I need to write a function1 that adds the "display: block" property to a list of items
-// I need to write another function2 that adds the "display: none" property to a list of items
-// I need to write a function3 that encorporates both func1 and func2 (remember to remove the load more button aswell)
-
-/***************/
-// function1
-/***************/
-/*
-
-def displayBlock(list){
-  iterate over list (for loop, map function, for each)
-  set the style of each item
-  list[i].style.display = "block"
+function displayBlock(element){
+  element.style.display = "block";
 }
 
-*/
-
-function displayBlock(){
-  this.style.display = "block";
+function displayNone(element){
+  element.style.display = "none";
 }
 
-/***************/
-// function2
-/***************/
-/*
+function func3(list){
+  var myArr = [];
+  for(var i=0; i<allCardList.length; i++){
+    var match = true;
+    for(var j=0; j<list.length; j++){
 
-def displayNone(list){
-  iterate over list (for loop, map function, for each)
-  set the style of each item
-  list[i].style.display = "none"
+      if (allCardList[i] === list[j]){
+        match = true;
+        break;
+      }else{
+        match = false;
+        continue;
+      }
+    }
+
+    if (match == false){
+      myArr.push(allCardList[i]);
+    }
+  }
+
+  console.log(myArr);
+  myArr.forEach(function(element) {
+    displayNone(element);
+  })
+  
+  console.log(list);
+  list.forEach(function (element) {
+    displayBlock(element);
+  });
+  
+  loadMore();
 }
-
-*/
-
-function displayNone(){
-  this.style.display = "none";
-}
-
-/***************/
-// function3
-/***************/
-/*
-
-get list of all elements
-iterate through list
-if list element === the element you want to show add function 1 (displayBlock) to it
-else if list element != the element you want to show add function 2 (displayNone) to it 
-
-*/
-
-
-
 
 // **************************
 // Close Modal Function 
@@ -305,7 +294,6 @@ function loadMore(){
   gridContainerSect2.style.height = "auto";
   loadMoreBtn.style.display = "none";
 };
-
 
 /************************************************
      NAVBAR UNDERLINES CHANGE COLOR - SECTION 2
