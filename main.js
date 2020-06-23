@@ -117,6 +117,9 @@ function lineFade(i) {
      START BUTTON - SCROLL DOWN ANIMATIONS
 ********************************************/
 
+var bodyTag = document.getElementById("body");
+console.log(bodyTag);
+
 function getElementY(query) {
   return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
 }
@@ -158,13 +161,18 @@ function doScrolling(element, duration) {
 }
 
 // Apply event handlers. Example of firing the scrolling mechanism.
-document.getElementById("start-btn").addEventListener("click", doScrolling.bind(null, "#work", 2000));
+document.getElementById("start-btn").addEventListener("click", function() {
+  doScrolling("#work", 2000);
+  addOverflowScroll(bodyTag);
+} );
 
 
 // Or simply:
 //doScrolling('#mytarget', 1000)
 
-
+function addOverflowScroll(element,){
+  element.style["overflow-y"] = "scroll";
+}
 
 
 /*******************************

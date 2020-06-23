@@ -13,6 +13,11 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 @font-face{
     font-family: 'KarmaticArcade';
     src: url('/font-styles/ka1.ttf');
