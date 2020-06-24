@@ -199,6 +199,11 @@ h2{
     cursor: url(/icons/hand.svg), auto;
 }
 
+#spaceship{
+    width: 100px;
+    height:100px;
+}
+
 #start-btn{
     background-color: #FFFFFF;
     width: 186px;
