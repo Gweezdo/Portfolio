@@ -7,7 +7,7 @@
 }
 
 #tribute-page-modal{
-    display: none;
+    /* display: none; */
     /* display: block; */
 }
 
@@ -106,8 +106,8 @@
 .modal-header hr,
 .modal-footer hr{
     height: 2px;
-    background-color: #05C7F2;
-    border-color: #05C7F2;
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .modal-body{
@@ -122,8 +122,9 @@
 .modal-body h5{
     font-size: 24px;
     line-height: 28px;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     font-weight: normal;
+    font-style: normal;
     padding-top: 16px;
 }
 
@@ -180,22 +181,39 @@
     letter-spacing: 0.3rem;
     border: none;
     cursor: url(/icons/hand.svg), auto;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
 }
 
 .view-project-btn{
-    color: #001228;
-    background: #FFFFFF;
+    color: #FFFFFF;
+    background: #385F92;
+    box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
     margin: 22px 0 0 16px;
     padding: 11px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     text-decoration: none;
 }
 
-.close-btn{
-    background: #001228;
-    color: #FFFFFF;
-    margin: 33px 0 0 0;
-    padding-right: 16px;
+.git-btn{
+    background: #385F92;
+    box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+    margin: 22px 0 0 0;
+    /* padding-right: 16px; */
+    line-height: 0;
+    font-size: 0;
+    letter-spacing: 0;
+    
+}
+
+.git-svg{
+    width: 46px;
+    height: 47px;
+}
+
+.modal-btn:hover{
+    background: #F27405;
+    box-shadow: 0px 4px 0px #FFFFFF;
 }
 
 

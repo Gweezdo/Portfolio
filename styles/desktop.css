@@ -5,17 +5,18 @@
 
 html, body {
     height: 100%;
-    background-color: #022859;
     cursor: url(/icons/spaceShip.svg), auto;
-    /* overflow: hidden; */
 }
+
 html{
     font-size: 62.5%;
+    
 }
 
 body{
     overflow-y: hidden;
     overflow-x: hidden;
+    
 }
 
 @font-face{
@@ -194,6 +195,7 @@ h2{
     font-size: 24px;
     line-height: 24px;
     position: relative;
+    letter-spacing: 0.3rem;
     display: block;
     text-align: center;
     cursor: url(/icons/hand.svg), auto;
@@ -205,16 +207,29 @@ h2{
 }
 
 #start-btn{
-    background-color: #FFFFFF;
+    background: #385F92;
+    box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
     width: 186px;
     height: 46px;
     top: 504px;
-    /* line-height: 46px; */
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF; 
     left: calc(50% - 186px/2);
-    /* z-index: 0; */
-    /* border-bottom: 1px solid red; */
-    /* opacity: 1; */
+    transition: all 0.2s ease-in;
+    scale: 2.0;
 }
+
+#start-btn:hover{
+    background: #F27405;
+    box-shadow: 0px 4px 0px #FFFFFF;
+}
+
+#start-btn:focus{
+    outline: none;
+}
+
+
 
 /*********************************
      SECTION 2 - Title and navbar
@@ -254,7 +269,7 @@ h2{
     text-align: center;
     font-size: 30px;
     line-height: 30px;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.3rem;
     /* background-color: #F27405; */
     padding: 16px 16px 8px 16px;
     margin: 0;
@@ -269,7 +284,7 @@ h2{
     background: #04C1FF;
     position: relative;
     display: block;
-    bottom: -2px;
+    bottom: 0px;
     visibility: hidden;
     opacity: 0;
     transition-property: all;
@@ -300,6 +315,24 @@ h2{
     opacity: 1;
 }
 
+
+.nav-link-sect2::before{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: #04C1FF;
+    position: relative;
+    display: none;
+    bottom: -33px;
+    /* visibility: hidden; */
+    opacity: 1;
+   
+}
+
+.nav-link-sect2:focus:before{
+    display: block;
+}
+
 /***/
 
 
@@ -321,36 +354,30 @@ h2{
     grid-row-gap: 32px;
     grid-template-columns: auto auto auto;
     margin-top: 80px;
-    /* margin-bottom: 30px; */
-    padding: 16px 16px;
-    /* left: 0; */
-    /* background: red; */
+    padding: 32px 32px;
     height: 680px;
     overflow: hidden;
+    color: #333333;
+    
 }
 
 .grid-item-sect2{
     cursor: url(/icons/hand.svg), auto;
     position: relative;
-    background-color: #001228;
-    border-radius: 40px;
-    /* width: 100%; */
-    height: 297px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    height: 306px;
     padding: 10px 10px;
-    border: solid #001228 3px;
-    /* display: block; */
+    /* margin: 32px 0; */
+    /* border: solid #001228 3px; */
 }
 
-/* #card-default{
-    position: absolute;
-    width: 467px;
-    height: 407px;
-    z-index: 0;
-    background-color: transparent;
-} */
 
 .grid-item-sect2:hover{
-    border: solid #F27405 3px;
+    /* border: solid #F27405 3px; */
+    background: #C4C4C4;
+    box-shadow: 0px 40px 50px rgba(0, 31, 51, 0.12), 0px 25px 20px rgba(0, 9, 14, 0.12);
 }
 
 
@@ -360,48 +387,49 @@ h2{
     height: 46px;
     left: calc(50% - 186px/2);
     display: block;
-    /* padding: 30px 30px; */
     position: relative;
 }
 
 .sect2-h4{
-    /* font-family: ArcadeClassic; */
-    /* font-style: normal; */
+    position: relative;
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
-    /* display: flex; */
     align-items: center;
     text-align: center;
     letter-spacing: 0.2rem;
-    padding: 0px; 
-    margin: 16px 32px;
-    /* background: rosybrown; */
+    padding: 10px 0px; 
+    /* margin: 16px 32px; */
+    height: 56px;
+    /* background-color: #5FA0F0; */
 }
 
 .grid-item-sect2 > p{
+    position: relative;
     font-family: RobottoMono;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 32px;
-    padding: 10px 32px;
-    color: #FFFFFF;
+    padding: 5px 10px;
+    color: #333333;;
     position: relative;
     height: 150px;
-    /* background-color: aqua; */
     text-align: center;
+    overflow: hidden;
+    /* background-color: #F27405; */
 }
 
 .all-badges-container{
+    position: absolute;
     display: flex;
-    /* background-color: #F27405; */
+    /* background-color: #022859; */
     position: relative;
     width: auto;
     height: 60px;
     float: right;
-    margin: 5px 32px 32px 0;
-    padding: 0;
+    /* margin: 5px 0 32px 0; */
+    padding: 10px 16px 0px 0;
     
 }
 
