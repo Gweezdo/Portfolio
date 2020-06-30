@@ -199,36 +199,37 @@ h2{
     display: block;
     text-align: center;
     cursor: url(/icons/hand.svg), auto;
+    background: #001228;
+    box-shadow: 0px 4px 0px #274972;
+    color: #FFFFFF; 
+    border-radius: 4px;
+    border: none;
 }
 
-#spaceship{
-    width: 100px;
-    height:100px;
+.btn:hover{
+    background: #F27405;
+    box-shadow: 0px 4px 0px #FFFFFF;
+}
+
+.btn:focus{
+    outline: none;
 }
 
 #start-btn{
-    background: #385F92;
-    box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+    
     width: 186px;
     height: 46px;
     top: 504px;
-    border-radius: 4px;
-    border: none;
-    color: #FFFFFF; 
     left: calc(50% - 186px/2);
     transition: all 0.2s ease-in;
     scale: 2.0;
 }
 
-#start-btn:hover{
-    background: #F27405;
-    box-shadow: 0px 4px 0px #FFFFFF;
-}
 
-#start-btn:focus{
-    outline: none;
+#spaceship{
+    width: 100px;
+    height:100px;
 }
-
 
 
 /*********************************
@@ -354,7 +355,7 @@ h2{
     grid-row-gap: 32px;
     grid-template-columns: auto auto auto;
     margin-top: 80px;
-    padding: 32px 32px;
+    padding: 32px 32px 32px 32px;
     height: 680px;
     overflow: hidden;
     color: #333333;
@@ -382,12 +383,17 @@ h2{
 
 
 #load-btn{
-    background-color: #FFFFFF;
+    
     width: 186px;
     height: 46px;
     left: calc(50% - 186px/2);
     display: block;
     position: relative;
+    margin-top: 25px;
+}
+
+#load-btn:hover{
+
 }
 
 .sect2-h4{
@@ -506,6 +512,10 @@ h2{
     letter-spacing: 0.1em;
 }
 
+#my-certificates{
+    margin-top: 20px;
+}
+
 #my-certificates h4, 
 #my-journey h4{
     /* font-family: ArcadeClassic; */
@@ -524,19 +534,26 @@ h2{
      SECTION 3 - Card grid
 *********************************/
 
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
 #grid-container-sect3{
     display: grid;
     position: relative;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: auto auto auto auto;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(50% - var(--gutter)*2);
     /* margin-top: 0px; */
     /* margin-bottom: 30px; */
     padding: 16px 16px;
     /* left: 0; */
     /* background: red; */
-    height: 600px;
-    overflow: hidden;
+    height: 260px;
+    /* overflow: hidden; */
 }
 
 .grid-item-sect3{
@@ -544,6 +561,12 @@ h2{
     position: relative;
     height: 200px;
     padding: 10px 10px;
+    transition: all 0.2s ease-out;
+    /* box-shadow: 0px 40px 50px rgba(0, 31, 51, 0.12), 0px 25px 20px rgba(0, 9, 14, 0.12); */
+}
+
+.grid-item-sect3:hover{
+    transform: scale(1.1);
 }
 
 /* .grid-item-sect3:hover{
@@ -555,8 +578,8 @@ h2{
     height: 50%;
     width: 100%;
     background-color: #FFFFFF;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
     text-align: center;
 }
 
@@ -573,18 +596,154 @@ img.sect3-logo{
     height: 50%;
     width: 100%;
     top: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    background: #BED8FB;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
     text-align: center;
     padding: 30px 0 0 0;
 }
 
 .sect3-logo-cont-bot p{
     padding: 0 10px;
+    text-decoration: none;
+    color: #001228;
+    font-weight: 500;
 }
+
+/*********************************
+     SECTION 3 - Testimonials
+*********************************/
+
+.testimonials{
+    position: relative;
+    font-family: RobottoMono;
+    color: #001228;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin: 100px 0px;
+    width: 800px;
+    font-weight: 500;
+    /* left: calc(50% - 800px/2); */
+    /* background-color: #022859; */
+}
+
+.quote{
+    font-size: 28px;
+    line-height: 33px;
+    padding: 10px 10px;
+    height: 100px;
+}
+
+.person{
+    font-size: 20px;
+    line-height: 23px;
+    padding: 10px 10px;
+}
+
+.mySlides {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.dot-container{
+    text-align:center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*********************************
+     SECTION 3 - My Journey
+*********************************/
+
 
 /*********************************
      SECTION 4 - Title
 *********************************/
 
+.section4{
+    background: linear-gradient(180deg, #5FA0F0 0%, #67A8F8 100%);
+    height: auto;
+    font-family: ArcadeClassic;
+    color: #001228;
+    padding: 80px 32px 32px 32px;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    
+}
+
+#sect4-h3{
+    position: relative;
+    font-size: 60px;
+    line-height: 61px;
+    letter-spacing: 1rem;
+}
+
+.section4 p{
+    font-family: RobottoMono;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+}
+form{
+    /* height: 500px; */
+    position: relative;
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.form-input{
+    position: relative;
+    display: block;
+    letter-spacing: 0.1em;
+    height: 50px;
+
+    color: rgba(255, 255, 255, 0.6);
+    background: #0468BF;
+}

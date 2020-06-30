@@ -1,3 +1,11 @@
+/***************************************
+     SCROLL WINDOW TO TOP ON PAGE RELOAD
+****************************************/
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 /*******************************
      NAVBAR SECTION 1 ANIMATIONS
 *******************************/
@@ -162,8 +170,8 @@ function doScrolling(element, duration) {
 
 // Apply event handlers. Example of firing the scrolling mechanism.
 document.getElementById("start-btn").addEventListener("click", function() {
-  doScrolling("#work", 2000);
-  addOverflowScroll(bodyTag);
+  setTimeout(() => doScrolling("#work", 2000), 0);
+  setTimeout(() => addOverflowScroll(bodyTag), 2000);
 } );
 
 
@@ -173,6 +181,8 @@ document.getElementById("start-btn").addEventListener("click", function() {
 function addOverflowScroll(element,){
   element.style["overflow-y"] = "scroll";
 }
+
+
 
 
 /*******************************
@@ -240,7 +250,7 @@ function func3(list){
 // Close Modal Function 
 // **************************
 
-var closeBtnList = document.querySelectorAll(".close-btn");
+var closeBtnList = document.querySelectorAll(".X-svg");
 var modal = document.getElementsByClassName("modal-background");
 
 closeBtnList.forEach(function (btn, index) {
@@ -309,3 +319,28 @@ function loadMore(){
 
 var navLinksS2 = document.querySelectorAll(".nav-link-sect2");
 
+/************************************************
+     TESTIMONIAL SLIDE SHOW - SECTION 3
+************************************************/
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
