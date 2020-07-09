@@ -5,13 +5,15 @@ allStars.forEach(function(star, index){
     star.addEventListener("mouseenter", function(){
         starGrow(index);
         starShine(index);
-    });
+        setTimeout(()=>{starShrink(index)}, 600);
+        setTimeout(()=>{starFade(index)},600);
+      });
 });
 
 allStars.forEach(function (star, index) {
   star.addEventListener("mouseleave", function () {
-    starShrink(index);
-    starFade(index);
+    // starShrink(index);
+    // starFade(index);
   });
 });
 

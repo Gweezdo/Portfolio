@@ -2,9 +2,9 @@
      SCROLL WINDOW TO TOP ON PAGE RELOAD
 ****************************************/
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
 
 /*******************************
      NAVBAR SECTION 1 ANIMATIONS
@@ -252,10 +252,12 @@ function func3(list){
 
 var closeBtnList = document.querySelectorAll(".X-svg");
 var modal = document.getElementsByClassName("modal-background");
+var body = document.querySelector("#body");
 
 closeBtnList.forEach(function (btn, index) {
   btn.addEventListener("click", function () {
     closeModal(index);
+
   });
 });
 
@@ -286,6 +288,7 @@ var allCards = document.querySelectorAll(".grid-item-sect2");
 allCards.forEach(function (card, index) {
   card.addEventListener("click", function () {
     displayModal(index);
+    body.classList.add("scrollStop")
   });
 });
 
@@ -297,6 +300,10 @@ function displayModal(index) {
       modal[i].style.display = "none";
     }
   }
+}
+
+function stopScroll(){
+  body.style['overflow-y'] = hidden;
 }
 
 /********************************************
@@ -343,4 +350,120 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+
+
+
+/************************************************
+     Contact Form submit handler
+************************************************/
+
+
+(() => {
+  const form = document.querySelector("form");
+  const formResponse = document.querySelector("js-form-response");
+
+  form.onsubmit = (e) => {
+    e.preventDefault();
+
+    // Prepare data to send
+    const data = {};
+    const formElements = Array.from(form);
+    formElements.map((input) => (data[input.name] = input.value));
+
+    // Log what our lambda function will receive
+    console.log(JSON.stringify(data));
+
+    // Construct an HTTP request
+    var xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action, true);
+    xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+    // Send the collected data as JSON
+    xhr.send(JSON.stringify(data));
+
+    // Callback function
+    xhr.onloadend = (response) => {
+      if (response.target.status === 200) {
+        // The form submission was successful
+        form.reset();
+        formResponse.innerHTML =
+          "Thanks for the message. I’ll be in touch shortly.";
+      } else {
+        // The form submission failed
+        formResponse.innerHTML = "Something went wrong";
+        console.error(JSON.parse(response.target.response).message);
+      }
+    };
+  };
+})();
+
+/************************************************
+     SECTION 3 - CAROUSEL SIDE SCROLL FUNCTIONS
+************************************************/
+
+const track = document.querySelector("#carousel-track-sect3");
+const certCards = Array.from(track.children);
+console.log(certCards)
+const leftBtn = document.querySelector(".carousel-btn--left");
+const rightBtn = document.querySelector(".carousel-btn--right");
+
+
+const certCardWidth = certCards[0].getBoundingClientRect().width;
+
+
+console.log(certCards[0].getBoundingClientRect());
+
+// when I click left, move to the left
+
+
+// when I click right, move to the right
+
+
+var padding = 32;
+var amountToMove = 0;
+var count = 0;
+
+if (count == 0) {
+    leftBtn.style.display = "none";
+    rightBtn.style.display = "block";
+}
+
+rightBtn.addEventListener("click", function() {
+  count += 1;
+  amountToMove -= (certCardWidth + padding);
+  console.log(amountToMove);
+  console.log("count:" + count);
+  moveCards(certCards);
+  checkCount();
+});
+
+leftBtn.addEventListener("click", function () {
+  count -= 1;
+  amountToMove += (certCardWidth + padding);
+  console.log(amountToMove);
+  console.log("count:" + count);
+  moveCards(certCards);
+  checkCount();
+});
+
+function moveCards(array){
+  array.forEach((element) => {
+    // element.style.transform = "translateX(" + amountToMove + "px)";
+    element.style.left = amountToMove + "px"; 
+  });
+} 
+
+function checkCount(){
+  if (count == 0) {
+    leftBtn.style.display = "none";
+    rightBtn.style.display = "block";
+  } else if (count == 1) {
+    leftBtn.style.display = "block";
+    rightBtn.style.display = "block";
+  } else if (count == 2) {
+    leftBtn.style.display = "block";
+    rightBtn.style.display = "none";
+  }
 }
