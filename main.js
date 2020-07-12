@@ -467,3 +467,38 @@ function checkCount(){
     rightBtn.style.display = "none";
   }
 }
+
+/************************************************
+     JOURNEY POPUP DISPLAY - SECTION 3
+************************************************/
+
+var treasureList = document.querySelectorAll(".treasure");
+var popupList = document.querySelectorAll(".journey_popup");
+var glowList = document.querySelectorAll(".glow");
+
+console.log("treasureList: " + treasureList);
+console.log("popupList: " + popupList);
+console.log("glowList" + glowList);
+
+
+treasureList.forEach((treasure, index) => {
+  treasure.addEventListener("click", function(){
+    //function 1 - make popup appear
+    showPopup(index);
+    //function 2 - disable glow
+    pauseGlow(index);
+    setTimeout(function(){ hidePopup(index); }, 3000);
+  })
+});
+
+function showPopup(index){
+  popupList[index].style.display = "block";
+}
+
+function hidePopup(index) {
+    popupList[index].style.display = "none";
+}
+
+function pauseGlow(index) {
+  glowList[index].style.display = "none";
+}

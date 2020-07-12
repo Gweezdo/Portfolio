@@ -15,7 +15,7 @@ html{
 }
 
 #body{
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     /* overflow-x: hidden; */
     
 }
@@ -221,7 +221,7 @@ h2{
     
     width: 186px;
     height: 46px;
-    top: 304px;
+    top: 400px;
     left: calc(50% - 186px/2);
     transition: all 0.2s ease-in;
     scale: 2.0;
@@ -482,18 +482,7 @@ h2{
     text-align: center;
 }
 
-@media screen and (max-width: 900px) {
-  #grid-container-sect2 {
-    grid-template-columns: auto auto;
-  }
-}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  #grid-container-sect2 {
-    grid-template-columns: auto;
-  }
-}
 
 
 /*********************************
@@ -547,7 +536,7 @@ h2{
 
 
 /*********************************
-     SECTION 3 - Card grid
+     SECTION 3 - Certificate Card grid
 *********************************/
 
 
@@ -658,6 +647,8 @@ img.sect3-logo{
 
 img.fcc-logo{
     top: 30px;
+    display: block;
+    margin: 0 auto;
 }
 
 .sect3-logo-cont-bot{
@@ -752,10 +743,7 @@ img.fcc-logo{
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+
 
 /*********************************
      SECTION 3 - My Journey
@@ -765,6 +753,7 @@ img.fcc-logo{
 .journey-container{
     display: flex;
     flex-direction: column;
+    margin-top: 32px;
 }
 
 .journey-entry{
@@ -773,31 +762,144 @@ img.fcc-logo{
     width: 100%;
 }
 
-.journey-date{
+.journey-entry .journey-date{
     font-size: 24px;
     position: relative;
     width: 150px;
-    height: 70px;
+    /* flex-grow: 2; */
+    height: 50px;
     letter-spacing: 0.1rem;
     /* background-color: #333333; */
-
+    font-style: normal;
+    font-weight: bold;
+    padding: 15px 0;
+    
 }
 
-.journey-activity{
+.journey-entry .journey-activity{
     font-size: 20px;
     letter-spacing: 0.1rem;
-    /* background: red; */
-    width: 80%;
-
-
+    /* background: green; */
+    width: 70%;
+    padding: 15px 0;
 }
+
+
+.journey-entry .journey_easteregg{
+    position: relative;
+    /* background: red; */
+    width: 60px;
+    /* margin: 0 auto; */
+    /* padding: 0 16px; */
+    left: 16px;
+}
+
+#green_gem{
+    /* top: 1080px; */
+    /* left: -350px; */
+    width: 50%;
+}
+
+#coin1{
+    /* top: 1260px;
+    left: 800px; */
+    width: 60%;
+}
+
+#coin2{
+    /* top: 1550px;
+    left: 490px; */
+    width: 35%;
+}
+
+#coin3{
+    /* top: 1875px;
+    left: 900px; */
+    width: 55%;
+}
+
+.coin_svg{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.glow{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fcee30;
+    /* filter: blur(10px); */
+    opacity: 0.4;
+    top: -4px;
+    left: -10px;
+    animation: glow 1s ease-in infinite alternate;
+    display: block;
+    
+}
+
+@keyframes glow{
+    0%{
+        transform: scale(1.0);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+.gem_svg, .coin_svg{
+    transition: scale(1.0);
+    animation: scale 1s ease-in infinite alternate;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1.0);
+    }
+    100%{
+        transform: scale(1.08);
+    }
+}
+
+.journey_popup{
+    position: absolute;
+    width: 220px;
+    /* height: auto; */
+    background: #022859;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    color: #FFFFFF;
+    padding: 20px;
+    /* letter-spacing: 0.1rem; */
+    left: -260px;
+    display: none;
+    z-index: 5;
+}
+
+.journey_popup .popup_date{
+    position: relative;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.journey_popup .popup_text{
+    position: relative;
+    /* font-weight: 500; */
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 10px;
+}
+
+
 
 /*********************************
      SECTION 4 - Title
 *********************************/
 
 .section4{
-    background: linear-gradient(180deg, #5FA0F0 0%, #67A8F8 100%);
+    background: linear-gradient(180deg, #67A8F8 0%, #7fb1f0 100%);
     height: auto;
     font-family: ArcadeClassic;
     color: #001228;
