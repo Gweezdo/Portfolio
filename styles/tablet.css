@@ -2,32 +2,75 @@
   and (min-device-width: 1024px) 
   and (max-device-width: 1250px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
-    /*********************************
-        SECTION 2 - Card grid
+      
+      /*********************************
+        SECTION 1 - Stars
     *********************************/
+    
+    .star-container .hover-radius{
+        visibility: hidden;
+    }
 
+      /*********************************
+      SECTION 2 - Card grid
+      *********************************/
+      
     .sect2-h4{
         font-size: 26px;
     }
-
+    
     .grid-item-sect2 > p{
         font-size: 16px;
     }
-
+    
     /*********************************
-     SECTION 3 - Certificate Card grid
+    SECTION 3 - Certificate Card grid
     *********************************/
 
     #carousel-track-sect3{
-        grid-template-columns: repeat(6, 33%);
+        grid-template-columns: repeat(6, 35%);
+        overflow-x: scroll;
+    }
+
+    button.carousel-btn{
+        display: none;
+        background: none;
+        border: none;
+    }
+
+    .arrow-svg{
+        display: none;
     }
 }
 
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    
+    /*********************************
+        SECTION 1 - Stars
+    *********************************/
+    
+    .star-container .hover-radius{
+        visibility: hidden;
+    }
+
+    #sect1-title-box{
+        width: 550px;
+        left: calc(50% - 550px/2);
+        background-color: red;
+    }
+
+    h1{
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    h2{
+        font-size: 45px;
+        line-height: 55px;
+    }
 
     /*********************************
         SECTION 2 - Card grid
@@ -47,15 +90,27 @@
      SECTION 3 - Certificate Card grid
     *********************************/
     #carousel-track-sect3{
-        grid-template-columns: repeat(6, 50%);
+        grid-template-columns: repeat(6, 48%);
+        overflow-x: scroll;
     }
+
+    button.carousel-btn{
+        display: none;
+        background: none;
+        border: none;
+    }
+
+    .arrow-svg{
+        display: none;
+    }
+
 
     /*********************************
      SECTION 3 - Testimonials
     *********************************/
 
     .testimonials{
-        width: 600px;
+        width: 700px;
     }
 
     .person{

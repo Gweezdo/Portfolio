@@ -1,46 +1,374 @@
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+/*********************************
+    SECTION 1 - Header
+*********************************/
+
+#burger-menu{
+    display: none;
+    position: relative;
+    /* background-color: rgb(223, 157, 140); */
+    width: 40px;
+    height: 40px;
+    /* padding: 12px 8px 12px 8px; */
+    /* margin: 0px 8px; */
+    float: left;
+    cursor: url(/icons/hand.svg), auto;
+    padding: 16px 8px;
+}
+
+.menu-line{
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 2.67px;
+    /* line-height: 2.67px; */
+    background-color: #DADADA;
+    /* padding: 2px 16px 2px 16px; */
+    margin: 0;
+    border-radius: 4px;
+    top: 18.67px;
+    left: 7px;
+    cursor: url(/icons/hand.svg), auto;
+}
+
+.menu-line::before,
+.menu-line::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #DADADA;
+    border-radius: 4px;
+}
+
+.menu-line::before{
+    top: 6.66px;
+    /* background-color: red; */
+}
+
+.menu-line::after{
+    top: -6.67px;
+}
+
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 768px){
+    
+    /*********************************
+    SECTION 1 - Title and navbar
+    *********************************/
+    .section1{
+        min-height: 600px;
+    }
+    
     #logo{
-        padding: 8px 16px 0px 18px;
+        padding: 8px 16px 0px 0px;
+    }
+
+    #logo > a{
+        padding: 16px 0px;
     }
 
     #logo-z{
         width: 37px;
         height: 36px;
     }
-
+    
     #navbar-main{
-        display: none;
+        visibility: hidden;
+        /* margin-right: 0px;
+        width: 110px;
+        justify-content: center;
+        background-color: red; */
     }
+    
+
+    
+
+    .nav-link{
+        /* display: inline-block; */
+        text-align: center;
+        /* top: calc(50% - 276px/2); */
+        margin: 0 auto;
+    }
+
+    .main-X-svg{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+        display: block;
+        visibility: hidden;
+        background-color: #DADADA;
+        padding: 16px;
+        left: calc(100% - 62px)
+    }
+
+    .visibility{
+        /* display: none; */
+    }
+
 
     #burger-menu{
         display: block;
     }
 
+
+
+    #sect1-title-box{
+        width: 90%;
+        left: calc(50% - 90%/2);
+        /* background-color: rgb(255, 153, 0); */
+        padding: 0;
+        top: 50vh;
+    }
+
     h1{
-    /* position: relative; */
-    /* color: #FFFFFF; */
-    font-family: KarmaticArcade;
-    /* font-style: normal; */
-    /* font-weight: normal; */
     font-size: 28px;
     line-height: 32px;
-    /* text-align: center; */
     letter-spacing: 0.2rem;
-    top: 232px;
-}
+    /* top: 232px; */
+    padding: 0;
+    }
 
-h2{
-    /* position: relative; */
-    /* color: #FFFFFF; */
-    font-family: ArcadeClassic;
-    /* font-style: normal; */
-    /* font-weight: normal; */
-    font-size: 28px;
-    line-height: 28px;
-    /* text-align: center; */
-    letter-spacing: 0.3rem;
-    top: 260px;
-}
+    h2{
+        font-size: 28px;
+        line-height: 28px;
+        /* letter-spacing: 0.3rem; */
+        /* top: 260px; */
+    }
+
+    /*********************************
+     SECTION 2 - Title and navbar
+    *********************************/
+    #sect2-h3{
+        font-size: 50px;
+        padding: 0 16px;
+    }
+
+
+
+    /*********************************
+        SECTION 2 - Card grid
+    *********************************/
+
+    #grid-container-sect2 {
+        grid-template-columns: auto;
+        padding: 32px 16px 50px 16px;
+    }
+
+    .sect2-h4{
+        font-size: 26px;
+    }
+    .grid-item-sect2 > p{
+        font-size: 16px;
+    }
+    /*********************************
+     SECTION 3 - Title
+    *********************************/
+    .section3{
+        padding: 50px 0px 32px 0px;
+    }
+
+    #sect3-h3{
+        font-size: 50px;
+        padding: 0 16px;
+    }
+
+    .section3 p{
+        padding: 0 16px;
+    }
+
+    /*********************************
+     SECTION 3 - Certificate Card grid
+    *********************************/
+    #my-certificates{
+        /* margin-top: 20px; */
+        padding: 20px 16px 0 16px;
+    }
+
+    #carousel-container-sect3{
+        padding: 0;
+        /* overflow: scroll; */
+        width: 100%;
+        margin: 0 0;
+    }
+
+    #carousel-track-sect3{
+        grid-template-columns: repeat(6, 90%);
+        overflow-x: scroll;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        /* display: block; */
+    }
+
+    /* .grid-item-sect3{
+        overflow-x: scroll;
+        display: inline-block;
+    } */
+
+    button.carousel-btn{
+        display: none;
+        background: none;
+        border: none;
+    }
+
+    .arrow-svg{
+        display: none;
+    }
+
+    .sect3-logo-cont-bot p{
+        margin-top: 16px;
+    }
+
+
+    /*********************************
+     SECTION 3 - Testimonials
+    *********************************/
+
+    .testimonials{
+        /* width: 700px; */
+    }
+
+    p.quote{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    p.person{
+        /* margin: 0px 0 10px 0; */
+        font-size: 18px;
+    }
+
+    .dot-container{
+        text-align:center;
+    }
+
+    /*********************************
+     SECTION 3 - My Journey
+    *********************************/
+    #my-journey{
+        padding: 0 16px;
+    }
+
+    .journey-container{
+        margin-top: 16px;
+    }
+
+    .journey-entry{
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .journey-entry .journey-date{
+        font-size: 24px;
+        line-height: 32px;
+        /* box-sizing: border-box; */
+        padding: 15px 0;
+        height: 10px;
+        display: block;
+        top: 0;
+    }
+
+    .journey-entry .journey-activity{
+        font-size: 20px;
+        width: 100%;
+        /* text-align: center; */
+    }
+
+    .journey-entry .journey_easteregg{
+        left: 80%;
+    }
+
+    #green_gem{
+        width: 100%;
+    }
+
+    #coin1, #coin2, #coin3, coin4{
+        width: 100%;
+    }
+    
+    .treasure, .glow{
+        /* margin: 16px 0; */
+        float: left;
+    }
+
+    .journey_popup{
+        padding: 10px 0px;
+        width: 200px;
+        left: -240px;
+    }
+
+    .journey_popup .popup_date{
+        font-size: 20px;
+    }
+
+    .journey_popup .popup_text{
+        font-size: 16px;
+    }
+
+    /*********************************
+        SECTION 4 - title
+    *********************************/
+
+
+    #sect4-h3{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    /*********************************
+        SECTION 4 - Contact Form
+    *********************************/
+
+    .contact-form-container{
+        width: 90%;
+        left: calc(50% - 90%/2);
+        margin-bottom: 90px;
+    }
+
+    .form-input{
+        width: 90%;
+    }
+
+    #cloud-1{
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        transform: scale(0.6);
+        display: none;
+    }   
+
+    #cloud-2{
+        /* display: none; */
+        top: 40px;
+        left: 50px;
+        transform: scale(0.9);
+    } 
+
+    #cloud-3{
+        display: none;
+    }  
+
+    #cloud-4{
+        top: 40px;
+        right: -10px;
+        transform: scale(0.8);
+    } 
+
+    .submit-btn{
+        left: calc(50% - 202px/2);
+        float: none;
+    }
+
+    #js-form-response{
+        /* height: 200px; */
+        margin: 30px 0;
+        /* float: none; */
+    }
 
 
 }

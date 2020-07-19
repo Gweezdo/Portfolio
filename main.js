@@ -2,9 +2,9 @@
      SCROLL WINDOW TO TOP ON PAGE RELOAD
 ****************************************/
 
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// };
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
 /*******************************
      NAVBAR SECTION 1 ANIMATIONS
@@ -117,7 +117,50 @@ function lineFade(i) {
 
 
 
+/**********************************
+     NAVBAR DROPDOWN - Section 1
+**********************************/
 
+var burgerMenu = document.getElementById("burger-menu");
+var mainLogo = document.getElementById("logo");
+var header = document.getElementById("header");
+var navbarMain = document.getElementById("navbar-main");
+var visibility = document.getElementsByClassName("visibility");
+var mainXSvg = document.getElementsByClassName("main-X-svg");
+
+
+burgerMenu.addEventListener("click", function(){
+  hideBurgerMenu();
+  hideLogo();
+  openDropdown();
+});
+
+function hideBurgerMenu(){
+  burgerMenu.style.display = "none";
+}
+
+function showBurgerMenu(){
+  burgerMenu.style.display = "block";
+}
+
+function hideLogo(){
+  mainLogo.style.display = "none";
+}
+
+function showLogo() {
+  mainLogo.style.display = "block";
+}
+
+function openDropdown(){
+  header.style.height = 100 + "%";
+  header.style.width = 100 + "%";
+  header.style.background = "#032550";
+  navbarMain.style.visibility = "visible";
+  navbarMain.style["flex-direction"] = "column";
+  navbarMain.style["margin-right"] = 0 + "px";
+  visibility[0].style.display = "block";
+  mainXSvg[0].style.visibility = "visible";
+}
 
 
 
