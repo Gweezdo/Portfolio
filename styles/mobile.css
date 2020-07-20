@@ -10,7 +10,7 @@
     height: 40px;
     /* padding: 12px 8px 12px 8px; */
     /* margin: 0px 8px; */
-    float: left;
+    /* float: left; */
     cursor: url(/icons/hand.svg), auto;
     padding: 16px 8px;
 }
@@ -77,37 +77,11 @@ and (max-device-width : 768px){
     }
     
     #navbar-main{
-        visibility: hidden;
-        /* margin-right: 0px;
-        width: 110px;
-        justify-content: center;
-        background-color: red; */
+        display: none;
     }
     
-
-    
-
     .nav-link{
-        /* display: inline-block; */
-        text-align: center;
-        /* top: calc(50% - 276px/2); */
         margin: 0 auto;
-    }
-
-    .main-X-svg{
-        position: relative;
-        width: 30px;
-        height: 30px;
-        z-index: 10;
-        display: block;
-        visibility: hidden;
-        background-color: #DADADA;
-        padding: 16px;
-        left: calc(100% - 62px)
-    }
-
-    .visibility{
-        /* display: none; */
     }
 
 
@@ -115,6 +89,21 @@ and (max-device-width : 768px){
         display: block;
     }
 
+    /* ._1.header-responsive{
+        width: 100%;
+        height: 100%;
+        background: #032550;
+    }
+
+    ._2.navbar-main-responsive{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        width: 200px;
+        left: calc(50% - 200px/2);
+        justify-content: center;
+    } */
 
 
     #sect1-title-box{
@@ -126,11 +115,11 @@ and (max-device-width : 768px){
     }
 
     h1{
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: 0.2rem;
-    /* top: 232px; */
-    padding: 0;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 0.2rem;
+        /* top: 232px; */
+        padding: 0;
     }
 
     h2{

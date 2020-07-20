@@ -118,15 +118,15 @@ function lineFade(i) {
 
 
 /**********************************
-     NAVBAR DROPDOWN - Section 1
-**********************************/
+ NAVBAR DROPDOWN - Section 1
+ **********************************/
 
 var burgerMenu = document.getElementById("burger-menu");
 var mainLogo = document.getElementById("logo");
-var header = document.getElementById("header");
-var navbarMain = document.getElementById("navbar-main");
 var visibility = document.getElementsByClassName("visibility");
 var mainXSvg = document.getElementsByClassName("main-X-svg");
+var header = document.getElementById("header");
+var navbarMain = document.getElementById("navbar-main");
 
 
 burgerMenu.addEventListener("click", function(){
@@ -134,6 +134,13 @@ burgerMenu.addEventListener("click", function(){
   hideLogo();
   openDropdown();
 });
+
+mainXSvg[0].addEventListener("click", function() {
+  showBurgerMenu();
+  showLogo();
+  closeDropdown();
+});
+
 
 function hideBurgerMenu(){
   burgerMenu.style.display = "none";
@@ -151,17 +158,55 @@ function showLogo() {
   mainLogo.style.display = "block";
 }
 
+// function setHeaderStyle(){
+//   console.log(header.className)
+//   if (header.className === "_1") {
+//     header.className += " header-responsive";
+//     console.log(header.className);
+//   } else {
+//     header.className = "_1";
+//   }
+// }
+
+// function setNavStyle() {
+//   if (navbarMain.className === "_2") {
+//     navbarMain.className += " navbar-main-responsive";
+//     console.log(navbarMain.className);
+//   } else {
+//     navbarMain.className = "_2";
+//     console.log(navbarMain.className);
+//   }
+// }
+
 function openDropdown(){
   header.style.height = 100 + "%";
   header.style.width = 100 + "%";
   header.style.background = "#032550";
-  navbarMain.style.visibility = "visible";
+  navbarMain.style.display = "flex";
   navbarMain.style["flex-direction"] = "column";
   navbarMain.style["margin-right"] = 0 + "px";
+  navbarMain.style.width = 200 + "px";
+  navbarMain.style.left = 'calc(50% - 200px/2)';
+  navbarMain.style["justify-content"] ="center";
   visibility[0].style.display = "block";
-  mainXSvg[0].style.visibility = "visible";
+  mainXSvg[0].style.display = "block";
+
 }
 
+function closeDropdown(){
+  header.style.height = "auto";
+  header.style.width = 100 + "%";
+  header.style.background = "#032550";
+  navbarMain.style.display = "none";
+  navbarMain.style["flex-direction"] = "row";
+  navbarMain.style["margin-right"] = 16 + "px";
+  navbarMain.style.width = "auto";
+  navbarMain.style.left = "auto";
+  navbarMain.style["justify-content"] = "none";
+  navbarMain.style.left = "calc(100% - 57px)";
+  visibility[0].style.display = "none";
+  mainXSvg[0].style.display = "none";
+}
 
 
 /********************************************
