@@ -196,6 +196,7 @@ function openDropdown(){
 function closeDropdown(){
   header.style.height = "auto";
   header.style.width = 100 + "%";
+  
   header.style.background = "#032550";
   navbarMain.style.display = "none";
   navbarMain.style["flex-direction"] = "row";
@@ -340,6 +341,7 @@ function func3(list){
 
 var closeBtnList = document.querySelectorAll(".X-svg");
 var modal = document.getElementsByClassName("modal-background");
+console.log(modal);
 var body = document.querySelector("#body");
 
 closeBtnList.forEach(function (btn, index) {
@@ -385,7 +387,7 @@ function displayModal(index) {
     if(i === index){
       modal[i].style.display = "block";
     }else{
-      modal[i].style.display = "none";
+      // modal[i].style.display = "none";
     }
   }
 }

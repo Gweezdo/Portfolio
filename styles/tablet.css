@@ -59,7 +59,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     #sect1-title-box{
         width: 550px;
         left: calc(50% - 550px/2);
-        background-color: red;
+        /* background-color: red; */
     }
 
     h1{
@@ -85,6 +85,20 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .grid-item-sect2 > p{
         font-size: 16px;
     }
+
+    /*********************************
+        SECTION 2 - Modal
+    *********************************/
+
+    /* .modal {
+        width: 320px;
+        height: 500px;
+        background: green;
+    }
+
+    .modal-header h4 {
+        font-size: 10px;
+    } */
 
     /*********************************
      SECTION 3 - Certificate Card grid

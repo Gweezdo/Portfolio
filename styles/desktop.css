@@ -495,7 +495,8 @@ h2{
     font-size: 60px;
     line-height: 61px;
     letter-spacing: 1rem;
-    padding: 0 32px;
+    padding: 0px 32px 0 32px;
+    /* margin-top: 20px; */
 }
 
 .section3 p{
@@ -1069,7 +1070,7 @@ form{
     position: relative;
     left: calc(50% - 100px);
     top: -60px;
-    z-index: 5;
+    z-index: 3;
     /* height: 50px; */
     background: red;
     /* display: block; */
