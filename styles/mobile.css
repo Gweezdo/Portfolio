@@ -116,9 +116,33 @@ and (-webkit-min-device-pixel-ratio: 1) {
     /*********************************
      SECTION 2 - Title and navbar
      *********************************/
-     #sect2-h3{
-         font-size: 50px;
+
+
+    #sect2-h3{
+        font-size: 50px;
         padding: 0 16px;
+    }
+
+    #navbar-sect2{
+        margin-left: 16px;
+        position: absolute;
+        z-index: 1;
+        background-color: #001228;
+        /* border-bottom-left-radius: 10px;
+         */
+        /* border-bottom-right-radius: 10px; */
+        top: 200px;
+        display: none;
+    }
+    
+    .nav-link-sect2{
+        /* box-sizing: border-box; */
+        /* padding: 0; */
+        display: block;
+    }
+
+    .btn-container{
+        display: block;
     }
     
     

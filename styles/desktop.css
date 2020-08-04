@@ -338,14 +338,44 @@ h2{
     display: block;
 }
 
-/***/
+#down-arrow{
+    position: relative;
+    width: 12px;
+    height: 10px;
+    left: 0px;
+    top: -5px;
+    margin-left: 5px;
+    /* display: none; */
+    /* z-index: 5; */
+    /* background-color: aliceblue; */
+}
 
+#all-nav, #html-nav, #js-nav{
+    /* display: none; */
+}
 
+#navbar-sect2-dropdownBtn{
+    font-family: ArcadeClassic;
+    position: relative;
+    height: 30px;
+    /* padding:  0 16px; */
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.3rem;
+    background: transparent;
+    border: none;
+    /* display: none; */
+    margin-left: 16px;
+    color: white;
+}
 
-
-
-/***/
-
+.btn-container{
+    position: relative;
+    top: 25px;
+    display: none;
+    /* background-color: red; */
+    width: 250px;
+}
 
 
 /*********************************

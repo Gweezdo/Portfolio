@@ -274,24 +274,102 @@ function addOverflowScroll(element,){
 
 
 
+
 /*******************************
-     NAVBAR SECTION 2 FILTER
-*******************************/
+ NAVBAR SECTION 2 FILTER
+ *******************************/
 
 var allCardList = document.querySelectorAll(".grid-item-sect2");
 var htmlCardList = document.querySelectorAll(".html-css-card");
 var jsCardList = document.querySelectorAll(".js-card");
 var pythonCardList = document.querySelectorAll(".python-card");
 
+var allLinks = document.querySelectorAll(".nav-link-sect2")
+
 var allNav = document.getElementById("all-nav");
 var htmlNav = document.getElementById("html-nav");
 var jsNav = document.getElementById("js-nav");
 var pythonNav = document.getElementById("python-nav");
+var mobileScreen = window.matchMedia("(max-device-width: 768px)");
 
-allNav.addEventListener("click", () => func3(allCardList));
-htmlNav.addEventListener("click", () => func3(htmlCardList));
-jsNav.addEventListener("click", () => func3(jsCardList));
-pythonNav.addEventListener("click", () => func3(pythonCardList));
+/*************************************
+     NAVBAR SECTION 2 FILTER - MOBILE
+*************************************/
+
+function displayLinks(element, list){
+  for(var i=0; i<list.length; i++){
+    if(list[i].contains(element)){
+        displayNone(element);
+    }else{
+        displayBlock(list[i]);
+    }
+  }
+}
+
+
+// 
+var dropDownBtn = document.getElementById("navbar-sect2-dropdownBtn");
+
+var s2Nav = document.getElementById("navbar-sect2");
+
+console.log(htmlNav.innerHTML);
+
+dropDownBtn.innerHTML = allNav.innerHTML;
+console.log(dropDownBtn.innerHTML);
+  if(mobileScreen.matches){
+    displayNone(allNav);
+  }
+
+dropDownBtn.addEventListener("click", function () {
+  displayBlock(s2Nav);
+});
+
+function assignText(receivingEl, givingEl){
+  receivingEl.innerHTML = givingEl.innerHTML;
+}
+
+
+
+allNav.addEventListener("click", function() {
+  if(mobileScreen.matches){
+    func3(allCardList);
+    assignText(dropDownBtn, allNav);
+    displayLinks(allNav, allLinks);
+    displayNone(s2Nav);
+  }else{
+    func3(allCardList);
+  }
+});
+htmlNav.addEventListener("click", function() {
+  if(mobileScreen.matches){
+    func3(htmlCardList);
+    assignText(dropDownBtn, htmlNav);
+    displayLinks(htmlNav, allLinks);
+    displayNone(s2Nav);
+  }else{
+    func3(htmlCardList)
+  }
+});
+jsNav.addEventListener("click", function() { 
+  if(mobileScreen.matches){
+    func3(jsCardList);
+    assignText(dropDownBtn, jsNav);
+    displayLinks(jsNav, allLinks);
+    displayNone(s2Nav);
+  }else{
+    func3(jsCardList)
+  }
+});
+pythonNav.addEventListener("click", function() {    
+  if(mobileScreen.matches){
+    func3(pythonCardList);
+    assignText(dropDownBtn, pythonNav);
+    displayLinks(pythonNav, allLinks);
+    displayNone(s2Nav);
+  }else{
+    func3(pythonCardList)
+  }
+});
 
 
 function displayBlock(element){
@@ -334,6 +412,9 @@ function func3(list){
   
   loadMore();
 }
+
+
+
 
 // **************************
 // Close Modal Function 
