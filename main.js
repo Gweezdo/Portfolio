@@ -2,9 +2,9 @@
      SCROLL WINDOW TO TOP ON PAGE RELOAD
 ****************************************/
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
 
 /*******************************
      NAVBAR SECTION 1 ANIMATIONS
@@ -127,6 +127,7 @@ var visibility = document.getElementsByClassName("visibility");
 var mainXSvg = document.getElementsByClassName("main-X-svg");
 var header = document.getElementById("header");
 var navbarMain = document.getElementById("navbar-main");
+var navlinkMain = document.querySelectorAll(".nav-link");
 
 
 burgerMenu.addEventListener("click", function(){
@@ -139,6 +140,16 @@ mainXSvg[0].addEventListener("click", function() {
   showBurgerMenu();
   showLogo();
   closeDropdown();
+});
+
+navlinkMain.forEach(function(element, index){
+  element.addEventListener("click", function(){
+    if(mobileScreen.matches){
+      showBurgerMenu();
+      showLogo();
+      closeDropdown();
+    }
+  });
 });
 
 
@@ -158,25 +169,7 @@ function showLogo() {
   mainLogo.style.display = "block";
 }
 
-// function setHeaderStyle(){
-//   console.log(header.className)
-//   if (header.className === "_1") {
-//     header.className += " header-responsive";
-//     console.log(header.className);
-//   } else {
-//     header.className = "_1";
-//   }
-// }
 
-// function setNavStyle() {
-//   if (navbarMain.className === "_2") {
-//     navbarMain.className += " navbar-main-responsive";
-//     console.log(navbarMain.className);
-//   } else {
-//     navbarMain.className = "_2";
-//     console.log(navbarMain.className);
-//   }
-// }
 
 function openDropdown(){
   header.style.height = 100 + "%";
@@ -532,7 +525,7 @@ function showSlides() {
 
 (() => {
   const form = document.querySelector("form");
-  const formResponse = document.querySelector("js-form-response");
+  const formResponse = document.querySelector("#js-form-response");
 
   form.onsubmit = (e) => {
     e.preventDefault();
@@ -556,15 +549,16 @@ function showSlides() {
 
     // Callback function
     xhr.onloadend = (response) => {
-      if (response.target.status === 200) {
+      if (response.target.status == 200) {
+        console.log("response.target.status =" + response.target.status);
         // The form submission was successful
         form.reset();
-        formResponse.innerHTML =
-          "Thanks for the message. I’ll be in touch shortly.";
+        formResponse.innerHTML = "Thanks for the message. I’ll be in touch shortly.";
       } else {
         // The form submission failed
         formResponse.innerHTML = "Something went wrong";
         console.error(JSON.parse(response.target.response).message);
+        form.reset();
       }
     };
   };

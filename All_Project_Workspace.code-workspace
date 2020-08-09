@@ -1,0 +1,48 @@
+{
+	"folders": [
+		{
+			"name": "Zjak Portfolio",
+			"path": "."
+		},
+		{
+			"name": "Project_1 - Tribute Page",
+			"path": "..\\FreeCodeCamp\\Responsive Web Design\\Project_1 - Tribute Page"
+		},
+		{
+			"name": "Project_2 - Survey Form",
+			"path": "..\\FreeCodeCamp\\Responsive Web Design\\Project_2 - Survey Form"
+		},
+		{
+			"path": "..\\FreeCodeCamp\\Responsive Web Design\\Project_3 - Product Landing Page"
+		},
+		{
+			"path": "..\\FreeCodeCamp\\Javascript Algorithms and Data Structures\\Project 1 - Palindrome Checker"
+		},
+		{
+			"path": "..\\FreeCodeCamp\\Javascript Algorithms and Data Structures\\Project 2 - Roman Numeral Converter"
+		},
+		{
+			"path": "..\\FreeCodeCamp\\Javascript Algorithms and Data Structures\\Project 3 - Caesars Cipher"
+		},
+		{
+			"path": "..\\FreeCodeCamp\\Javascript Algorithms and Data Structures\\Project 4 - Phone Number Validator"
+		},
+		{
+			"path": "..\\FreeCodeCamp\\Javascript Algorithms and Data Structures\\Project 5 - Cash Register"
+		},
+		{
+			"path": "..\\Python\\Projects\\Project 1 - adding report function"
+		},
+		{
+			"path": "..\\Python\\Projects\\Project 2 - element quiz"
+		},
+		{
+			"path": "..\\Python\\Projects\\Project 3 - Tic Tac Toe"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "Zjak Portfolio"
+	}
+}
