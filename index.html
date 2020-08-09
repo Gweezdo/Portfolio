@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the software development protfolio for Zjak Theron that documents all the work and achievements done to date.">    
     <link rel="stylesheet" href="/styles/desktop.css">
     <link rel="stylesheet" href="/styles/modal.css">
     <link rel="stylesheet" href="/styles/mobile.css">
@@ -14,8 +15,8 @@
 
     <header id="header">
         <div id="logo">
-            <a href="#home">
-            <svg id="logo-z">
+            <a href="#home" aria-label="home button container">
+            <svg id="logo-z" title="home button icon">
                 <use xlink:href="/icons/Z.svg#icon-z"></use>
             </svg>
             </a>
@@ -527,6 +528,7 @@
             <a class="nav-link-sect2" id="python-nav" href="#python">PYTHON</a>
             <a class="nav-link-sect2" id="js-nav" href="#javascript">JAVASCRIPT</a>
             <a class="nav-link-sect2" id="html-nav" href="#html-css">HTML / CSS</a>
+            <a class="nav-link-sect2" id="jquery-nav" href="#jquery">jQuery</a>
         </div>
 
         <div id="grid-container-sect2">
@@ -575,7 +577,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-item-sect2 html-css-card js-card">
+            <div class="grid-item-sect2 html-css-card js-card jquery-card">
                 <h4 class="sect2-h4">PALINDROME CHECKER</h4>
                 <p>A WEB APP TO TEST IF A WORD OR A SENTENCE IS PALINDROMIC IN NATURE.</p>
                 <div class="all-badges-container">
@@ -593,9 +595,14 @@
                         <img src="/icons/JS Badge.png" alt="javascript icon">
                         <p>JS</p>
                     </div>
+
+                    <div class="badge-container">
+                        <img src="/icons/jQuery Bdge.png" alt="jQuery icon">
+                        <p>jQuery</p>
+                    </div>
                 </div>
             </div>
-            <div class="grid-item-sect2 html-css-card js-card">
+            <div class="grid-item-sect2 html-css-card js-card jquery-card">
                 <h4 class="sect2-h4">ROMAN NUMERAL CONVERTER</h4>
                 <p>A WEB APP THAT CONVERTS ANY DECIMAL NUMBER TO A ROMAN NUMERAL.</p>
                 <div class="all-badges-container">
@@ -612,6 +619,11 @@
                     <div class="badge-container">
                         <img src="/icons/JS Badge.png" alt="javascript icon">
                         <p>JS</p>
+                    </div>
+
+                    <div class="badge-container">
+                        <img src="/icons/jQuery Bdge.png" alt="jQuery icon">
+                        <p>jQuery</p>
                     </div>
                 </div>
             </div>
@@ -1219,7 +1231,7 @@
 
             <div id="carousel-container-sect3">
                 <button class="carousel-btn carousel-btn--left">
-                    <img class="arrow-svg" src="/icons/side arrow.svg" alt="">
+                    <img class="arrow-svg" src="/icons/side arrow.svg" alt="left arrow">
                 </button>
 
                 <div id="carousel-track-sect3">
@@ -1295,7 +1307,7 @@
                 </div>
 
                 <button class="carousel-btn carousel-btn--right">
-                    <img class="arrow-svg" src="/icons/side arrow.svg" alt="">
+                    <img class="arrow-svg" src="/icons/side arrow.svg" alt="right arrow">
                 </button>
             
             </div>
@@ -1334,7 +1346,7 @@
                     <p class="journey-activity" id="green_gem">Successfully completed Diploma in Civil Engineering</p>
                     <div class="journey_easteregg" >
                         <div class="glow"></div>
-                        <img class="gem_svg treasure" src="/icons/green_gem.svg" alt="">
+                        <img class="gem_svg treasure" src="/icons/green_gem.svg" alt="green gem">
                         <div class="journey_popup">
                             <p class="popup_date">2011 JAN</p>
                             <p class="popup_text">First home adsl internet connection (1Mbps download speed)</p>
@@ -1356,7 +1368,7 @@
                     <p class="journey-activity" id="coin1">Started the Australian immigration process</p>
                     <div class="journey_easteregg" >
                         <div class="glow"></div>
-                        <img class="coin_svg treasure" src="/icons/coin.svg" alt="">
+                        <img class="coin_svg treasure" src="/icons/coin.svg" alt="golden coin">
                         <div class="journey_popup">
                             <p class="popup_date">2014 JAN</p>
                             <p class="popup_text">Adopted a cat</p>
@@ -1378,7 +1390,7 @@
                     <p class="journey-activity" id="coin2">Started learning code</p>
                     <div class="journey_easteregg" >
                     <div class="glow"></div>
-                    <img class="coin_svg treasure" src="/icons/coin.svg" alt="">
+                    <img class="coin_svg treasure" src="/icons/coin.svg" alt="golden coin">
                     <div class="journey_popup">
                         <p class="popup_date">2016 FEB</p>
                         <p class="popup_text">First time standing up on a surfboard </p>
@@ -1400,7 +1412,7 @@
                     <p class="journey-activity" id="coin3">Completed Microsoft's <i>Introduction to Python: Absolute Beginner</i> course</p>
                     <div class="journey_easteregg" >
                     <div class="glow"></div>
-                    <img class="coin_svg treasure" src="/icons/coin.svg" alt="">
+                    <img class="coin_svg treasure" src="/icons/coin.svg" alt="golden coin">
                     <div class="journey_popup">
                         <p class="popup_date">2017 APR</p>
                         <p class="popup_text">Got married</p>
@@ -1417,10 +1429,10 @@
     </section>
 
     <section id="contact" class="section4">
-        <img class="cloud" id="cloud-1" src="/icons/cloud-1.svg" alt="">
-        <img class="cloud" id="cloud-2" src="/icons/cloud-2.svg" alt="">
-        <img class="cloud" id="cloud-3" src="/icons/cloud-3.svg" alt="">
-        <img class="cloud" id="cloud-4" src="/icons/cloud-4.svg" alt="">
+        <img class="cloud" id="cloud-1" src="/icons/cloud-1.svg" alt="white cloud 1">
+        <img class="cloud" id="cloud-2" src="/icons/cloud-2.svg" alt="white cloud 2">
+        <img class="cloud" id="cloud-3" src="/icons/cloud-3.svg" alt="white cloud 3">
+        <img class="cloud" id="cloud-4" src="/icons/cloud-4.svg" alt="white cloud 4">
 
         <div class="contact-form-container">
             <h3 id="sect4-h3">CONTACT</h3>
@@ -1446,11 +1458,11 @@
         </div>
     </section>
     <footer class="grass">
-        <img class="ground" src="/icons/ground.svg" alt="">
+        <img class="ground" src="/icons/ground.svg" alt="green grass">
         <div class="contact-icons">
-            <a class="git-footer" href="https://github.com/Gweezdo/Portfolio" target="_blank"><img  src="/icons/git logo 2.svg" alt=""></a>
-            <a class="email-footer" href="mailto:z.trivium@gmail.com" target="_blank"><img  src="/icons/email icon.svg" alt=""></a>
-            <a class="linkedin-footer" href="https://www.linkedin.com/in/zjak-theron/" target="_blank"><img  src="/icons/linkedin logo.svg" alt=""></a>
+            <a class="git-footer" href="https://github.com/Gweezdo/Portfolio" target="_blank"><img  src="/icons/git logo 2.svg" alt="github icon"></a>
+            <a class="email-footer" href="mailto:z.trivium@gmail.com" target="_blank"><img  src="/icons/email icon.svg" alt="email send icon"></a>
+            <a class="linkedin-footer" href="https://www.linkedin.com/in/zjak-theron/" target="_blank"><img  src="/icons/linkedin logo.svg" alt="linkedin icon"></a>
         </div>
     </footer>
     

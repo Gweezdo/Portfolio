@@ -43,8 +43,8 @@
 }
 
 #cashRegister-function-modal{
-    /* display: none; */
-    display: block;
+    display: none;
+    /* display: block; */
 }
 
 #adding-report-modal{

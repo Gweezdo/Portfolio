@@ -276,6 +276,7 @@ var allCardList = document.querySelectorAll(".grid-item-sect2");
 var htmlCardList = document.querySelectorAll(".html-css-card");
 var jsCardList = document.querySelectorAll(".js-card");
 var pythonCardList = document.querySelectorAll(".python-card");
+var jqueryCardList = document.querySelectorAll(".jquery-card");
 
 var allLinks = document.querySelectorAll(".nav-link-sect2")
 
@@ -283,6 +284,7 @@ var allNav = document.getElementById("all-nav");
 var htmlNav = document.getElementById("html-nav");
 var jsNav = document.getElementById("js-nav");
 var pythonNav = document.getElementById("python-nav");
+var jqueryNav = document.getElementById("jquery-nav");
 var mobileScreen = window.matchMedia("(max-device-width: 768px)");
 
 /*************************************
@@ -361,6 +363,17 @@ pythonNav.addEventListener("click", function() {
     displayNone(s2Nav);
   }else{
     func3(pythonCardList)
+  }
+});
+
+jqueryNav.addEventListener("click", function () {
+  if (mobileScreen.matches) {
+    func3(jqueryCardList);
+    assignText(dropDownBtn, jqueryNav);
+    displayLinks(jqueryNav, allLinks);
+    displayNone(s2Nav);
+  } else {
+    func3(jqueryCardList);
   }
 });
 
