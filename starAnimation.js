@@ -86,38 +86,17 @@ function starFade(i) {
  Copy Multiple Stars
 *********************************/
 
-// function multiplyNode(node, count, deep) {
-//   for (var i = 0, copy; i < count - 1; i++) {
-//     copy = node.cloneNode(deep);
-//     node.parentNode.insertBefore(copy, node);
-//   }
-// }
 
-// multiplyNode(document.querySelector(".hover-radius"), 15, true);
 
-// var allDivs = document.querySelectorAll(".parent_container");
-// console.log(allDivs)
+// allStars.forEach(function(star, index){
 
-// function bigFunc(){
-//   allStars.forEach(function(star, index){
-//   starGrow(index);
-//   starShine(index);
-//   setTimeout(()=>{starShrink(index)}, 600);
-//   setTimeout(()=>{starFade(index)},600);
-//   });
-// }
+//   var leftVar = Math.random() * 0.9 * 100;
+//   var topVar = Math.random() * 0.5 * 100;
 
-// console.log("allstars: " + allStars)
-
-allStars.forEach(function(star, index){
-
-  var leftVar = Math.random() * 0.9 * 100;
-  var topVar = Math.random() * 0.5 * 100;
-
-  star.style.position = 'absolute';
-  // console.log(star.style.position);
-  star.style.left = leftVar + "%";
-  // console.log(star.style.left);
-  star.style.top = topVar + "%"; 
+//   star.style.position = 'absolute';
+//   // console.log(star.style.position);
+//   star.style.left = leftVar + "%";
+//   // console.log(star.style.left);
+//   star.style.top = topVar + "%"; 
   
-});
+// });

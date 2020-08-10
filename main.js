@@ -2,9 +2,9 @@
      SCROLL WINDOW TO TOP ON PAGE RELOAD
 ****************************************/
 
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// };
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
 /*******************************
      NAVBAR SECTION 1 ANIMATIONS

@@ -19,7 +19,7 @@ html{
 }
 
 body{
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     /* overflow-x: hidden; */
     
 }
@@ -225,13 +225,13 @@ h2{
     100%{left: 110%}
 }
 
-/* .star-container{
-    background-color: red;
+.star-container{
     position: relative;
-    min-height: 100%;
-    width: 100%;
-    top: -69px;
-} */
+    background-color: red;
+    /* z-index: 99; */
+    width: 80%;
+    height:90%;
+}
 
 /*********************************
      SECTION 2 - Title and navbar

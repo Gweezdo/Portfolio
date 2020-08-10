@@ -6,9 +6,9 @@
       /*********************************
         SECTION 1 - Stars
     *********************************/
-    
-    .star-container .hover-radius{
-        visibility: hidden;
+
+    .hover-radius:nth-child(n+38):nth-child(-n+51) {
+      display: none;
     }
 
       /*********************************
@@ -53,8 +53,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
         SECTION 1 - Stars
     *********************************/
     
-    .star-container .hover-radius{
-        visibility: hidden;
+    .hover-radius:nth-child(n+32):nth-child(-n+51), .hover-radius:nth-child(n+20):nth-child(-n+20){
+        display: none;
     }
 
     #sect1-title-box{

@@ -61,7 +61,7 @@ body{
     top: 5px;
 }
 
-/* #pos1{
+#pos1{
     position: absolute;
     left: calc(30/1280 * 100%);
     top: calc(124/1280 * 100%);
@@ -379,5 +379,5 @@ body{
     position: absolute;
     left: calc(1060/1280 * 100%);
     top: calc(900/1280 * 100%);
-} */
+}
 
