@@ -43,6 +43,6 @@
 	"settings": {
 		"liveServer.settings.port": 5501,
 		"git.ignoreLimitWarning": true,
-		"liveServer.settings.multiRootWorkspaceName": "Zjak Portfolio"
+		"liveServer.settings.multiRootWorkspaceName": "Project 1 - Palindrome Checker"
 	}
 }
