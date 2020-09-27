@@ -67,6 +67,15 @@
     /* display: block; */
 }
 
+#RPSLS-modal{
+    display:none;
+    /* display: block; */
+}
+
+#prop-generator-modal{
+    display:none;
+}
+
 /* add this code to body with js once modal is opened to prevent background from scrolling */
 /* body{
     position: fixed;
