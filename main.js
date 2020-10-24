@@ -642,6 +642,9 @@ function checkCount(){
     rightBtn.style.display = "block";
   } else if (count == 2) {
     leftBtn.style.display = "block";
+    rightBtn.style.display = "block";
+  } else if (count == 3) {
+    leftBtn.style.display = "block";
     rightBtn.style.display = "none";
   }
 }

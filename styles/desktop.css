@@ -618,7 +618,7 @@ h2{
 #carousel-track-sect3{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(6, 25%);
+    grid-template-columns: repeat(7, 25%);
     /* background: green; */
     width: 95%;
     height: 300px;
@@ -627,6 +627,7 @@ h2{
     top: 20px;
     /* left: -200px; */
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 a {
