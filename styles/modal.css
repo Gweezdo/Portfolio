@@ -7,6 +7,16 @@
     display: block;
 }
 
+#catalyst-browser-modal{
+    display: none;
+    /* display: block; */
+}
+
+#monsters-rolodex-modal{
+    display: none;
+    /* display: block; */
+}
+
 #tribute-page-modal{
     display: none;
     /* display: block; */
@@ -173,6 +183,10 @@
     overflow-x: hidden;
     /* overflow-y: hidden; */
     /* background: orange; */
+}
+
+.brief-link{
+    color: white;
 }
 
 .modal-body h5{

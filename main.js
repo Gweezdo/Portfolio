@@ -277,6 +277,9 @@ var htmlCardList = document.querySelectorAll(".html-css-card");
 var jsCardList = document.querySelectorAll(".js-card");
 var pythonCardList = document.querySelectorAll(".python-card");
 var jqueryCardList = document.querySelectorAll(".jquery-card");
+var reactCardList = document.querySelectorAll(".react-card");
+var reduxCardList = document.querySelectorAll(".redux-card");
+var sassCardList = document.querySelectorAll(".sass-card");
 
 var allLinks = document.querySelectorAll(".nav-link-sect2")
 
@@ -285,6 +288,9 @@ var htmlNav = document.getElementById("html-nav");
 var jsNav = document.getElementById("js-nav");
 var pythonNav = document.getElementById("python-nav");
 var jqueryNav = document.getElementById("jquery-nav");
+var reactNav = document.getElementById("react-nav");
+var reduxNav = document.getElementById("redux-nav");
+var sassNav = document.getElementById("sass-nav");
 var mobileScreen = window.matchMedia("(max-device-width: 768px)");
 
 /*************************************
@@ -374,6 +380,39 @@ jqueryNav.addEventListener("click", function () {
     displayNone(s2Nav);
   } else {
     func3(jqueryCardList);
+  }
+});
+
+reactNav.addEventListener("click", function () {
+  if (mobileScreen.matches) {
+    func3(reactCardList);
+    assignText(dropDownBtn, reactNav);
+    displayLinks(reactNav, allLinks);
+    displayNone(s2Nav);
+  } else {
+    func3(reactCardList);
+  }
+});
+
+reduxNav.addEventListener("click", function () {
+  if (mobileScreen.matches) {
+    func3(reduxCardList);
+    assignText(dropDownBtn, reduxNav);
+    displayLinks(reduxNav, allLinks);
+    displayNone(s2Nav);
+  } else {
+    func3(reduxCardList);
+  }
+});
+
+sassNav.addEventListener("click", function () {
+  if (mobileScreen.matches) {
+    func3(sassCardList);
+    assignText(dropDownBtn, reduxNav);
+    displayLinks(sassNav, allLinks);
+    displayNone(s2Nav);
+  } else {
+    func3(sassCardList);
   }
 });
 
