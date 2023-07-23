@@ -533,11 +533,45 @@
             <a class="nav-link-sect2" id="react-nav" href="#react">React</a>
             <a class="nav-link-sect2" id="redux-nav" href="#redux">Redux</a>
             <a class="nav-link-sect2" id="sass-nav" href="#scss">Sass</a>
+            <a class="nav-link-sect2" id="uipath-nav" href="#uipath">UiPath</a>
+            <a class="nav-link-sect2" id="sql-nav" href="#SQL">SQL Server</a>
+            <a class="nav-link-sect2" id="power-apps-nav" href="#PowerApps">Power Apps</a>
         </div>
 
         <div id="grid-container-sect2">
 
-             <div class="grid-item-sect2 html-css-card js-card jquery-card react-card redux-card npm-card sass-card">
+            <div class="grid-item-sect2 uipath-card sql-card power-apps-card">
+                <h4 class="sect2-h4">Blackbook Projects</h4>
+                <p>An overview of some of the projects I've worked on and technologies I've worked with during my employment.</p>
+                <div class="all-badges-container">
+                    <div class="badge-container">
+                        <img src="/icons/PA-icon.png" alt="Power Automate icon">
+                        <p>Power Automate</p>
+                    </div>
+
+                    <div class="badge-container">
+                        <img src="/icons/UiPath-icon.png" alt="UiPath icon">
+                        <p>UiPath</p>
+                    </div>
+
+                    <div class="badge-container">
+                        <img src="/icons/SSMS-icon.png" alt="SSMS icon">
+                        <p>SSMS</p>
+                    </div>
+                    <div class="badge-container">
+                        <img src="/icons/SQL-icon.png" alt="SQL icon">
+                        <p>SQL</p>
+                    </div>
+
+                    <div class="badge-container">
+                        <img src="/icons/powerApps-icon.png" alt="Canvas Apps icon">
+                        <p>Power Apps</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="grid-item-sect2 html-css-card js-card jquery-card react-card redux-card npm-card sass-card">
                 <h4 class="sect2-h4">CATALYST REPO BROWSER</h4>
                 <p>A WEB BASED GITHUB REPOSITORY BROWSER FOR CATALYST.</p>
                 <div class="all-badges-container">
@@ -572,7 +606,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="grid-item-sect2 html-css-card js-card jquery-card react-card redux-card npm-card sass-card">
                 <h4 class="sect2-h4">MONSTERS ROLODEX</h4>
                 <p>A WEB BASED ROLODEX APP TO STORE AND SEARH ALL YOUR MONSTER FRIENDS.</p>
@@ -603,7 +636,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="grid-item-sect2 html-css-card js-card jquery-card">
                 <h4 class="sect2-h4">PALINDROME CHECKER</h4>
                 <p>A WEB APP TO TEST IF A WORD OR A SENTENCE IS PALINDROMIC IN NATURE.</p>
@@ -806,6 +838,62 @@
     <!--***********************-->
     <!--WORK CARDS MODAL MARKUP-->
     <!--***********************-->
+
+     <!--Blackbook Projects-->
+    <!--*********************************-->
+    <div class="modal-background" id="blackbook-projects">
+        <div class="modal" >
+            <div class="modal-header">
+                <h4>BLACKBOOK PROJECTS</h4>
+                <svg class="X-svg">
+                    <use xlink:href="/icons/close_X.svg#close_X"></use>
+                </svg>
+                <hr>
+            </div>
+            <div class="modal-body">
+                <h5>OVERVIEW</h5>
+                <p>All the work I did during my employment is under strict NDA, so cannot share the code freely on github, however I've taken a few screenshots (redacting sensitive information) on some of the tools and technologies I was exposted to and obtained experience in during this time.</p>
+                
+                <!--
+                <h5>BRIEF</h5>
+                <p>Click <u><a href="/CatAU-frontend-dev-design-task.pdf" target="_blank" class="brief-link">here</a></u> to view the full brief.</p>
+
+                <h5>REQUIREMENTS</h5>
+                <p>See brief above for app requirements.</p>
+                -->
+
+                <h5>LEARNINGS</h5>
+                <p> Building countless automation workflows in UiPath using the RE Framework. <br>
+                    Creating process solution design diagrams to plan new workflows using draw.io.<br>
+                    Working with Microsoft's SQL Server Management Studio to view and query process information. <br>
+                    Writing store procedures that get's called from UiPath to extract and update data in the database.<br>
+                    Use Microsoft Power Apps to build user facing apps to assist business users to access and update data in the database.<br>
+                    Use Mocrosoft Power Automate to develop and deploy automation workflows.<br>
+                    Working with Git and Github in a professional setting.<br>
+                    Working with Business Analysts to capture requirements for a process.<br>
+                    Working with stakeholders and managing time and cost expectations on a project.<br>
+
+                </p>
+
+                 <!--   
+                <h5>RESPONSIVE PAGE</h5>
+                <p>Yes - View on any device.</p>
+                -->
+            </div>
+
+            <div class="modal-footer">
+                <hr>
+                <a class="view-project-btn modal-btn" href='https://drive.google.com/drive/folders/1S_IYDAT-_OB9vgVHVZ_VHZ95N_d3JknN?usp=sharing' target="_blank">VIEW PROJECT</a>
+                <!--
+                <a class="git-btn modal-btn" href="https://github.com/Gweezdo/React_Repo_Browser" target="_blank">
+                    <svg class="git-svg">
+                        <use xlink:href="/icons/git logo.svg#git-logo"></use>
+                    </svg>
+                </a>
+                -->
+            </div>    
+        </div>
+    </div>
     
  <!--Catalys Repo Browser-->
     <!--*********************************-->
@@ -1461,9 +1549,22 @@
 
     <section id="about" class="section3" >
         <h3 id="sect3-h3">ABOUT</h3>
-        <p id=sect3-p>For the past 5 years I have been a Structural Engineer. <br><br>Now, I am pursuing my dream of becoming a Software Developer! <br><br>Since emigrating to Sydney in 2019, I've been honing my skills to take the big plunge. I am a self taught programmer and define myself as a lifelong learner. I love problem solving and building things with software. I also enjoy anything to do with tech, surfing and spending time with family and friends.
+        <p id=sect3-p><!-- For the past 5 years I have been a Structural Engineer. <br><br>
+            Now, I am pursuing my dream of becoming a Software Developer! <br><br>
+            Since emigrating to Sydney in 2019, I've been honing my skills to take the big plunge. 
+            I am a self taught programmer and define myself as a lifelong learner. 
+            I love problem solving and building things with software. 
+            I also enjoy anything to do with tech, surfing and spending time with family and friends.
         
-        <br><br>I am excited and can’t wait for the journey that lies before me!
+        <br><br>I am excited and can’t wait for the journey that lies before me! -->
+
+        I am a professional software developer working remotely in Australia. <br><br>
+        I have worked in the field for the past 2+ years, with most of my experience as an Automation consultant in the RPA space. 
+        I also have a background in Structural Engineering and Drafting.
+
+        <br><br>I am a lifelong learner, interested in solving problems and building software that can make a positive difference in the world.
+
+
         </p>
 
         <div id="my-certificates">
@@ -1475,6 +1576,28 @@
                 </button>
 
                 <div id="carousel-track-sect3">
+
+                     <!--CERTIFICATE UiPath-Advanced-->
+                    <!--************************-->
+                    <a class="grid-item-sect3" href="/certificates/UiPath_Advanced.pdf" target="_blank">
+                        <div class="sect3-logo-cont-top">
+                            <img class="sect3-logo" src="/icons/UiPath_Logo.png" alt="UiPath logo">
+                        </div>
+                        <div class="sect3-logo-cont-bot">
+                            <p>UiPath Certified Advanced RPA Developer v1.0 (UiARD)</p>
+                        </div>
+                    </a>
+
+                    <!--CERTIFICATE UiPath-Associate-->
+                    <!--************************-->
+                    <a class="grid-item-sect3" href="/certificates/UiPath_Associate.pdf" target="_blank">
+                        <div class="sect3-logo-cont-top">
+                            <img class="sect3-logo" src="/icons/UiPath_Logo.png" alt="UiPath logo">
+                        </div>
+                        <div class="sect3-logo-cont-bot">
+                            <p>UiPath Certified RPA Associate v1.0 (UiRPA)</p>
+                        </div>
+                    </a>
                    
                     <!--CERTIFICATE SQL-->
                     <!--************************-->
@@ -1691,6 +1814,23 @@
                     <p class="journey-activity">Completed my first React (with Redux) project, that calls the github API and paginate through page results</p>
                     <div class="journey_easteregg"></div>
                 </div>
+                <div class="journey-entry">
+                    <p class="journey-date">2021 JUL</p>
+                    <p class="journey-activity">Landed my first full time job as a RPA Developer at Blackbook.ai</p>
+                    <div class="journey_easteregg"></div>
+                </div>
+                <div class="journey-entry">
+                    <p class="journey-date">2021 JUL</p>
+                    <p class="journey-activity">Successfully completed the UiPath Associate certification</p>
+                    <div class="journey_easteregg"></div>
+                </div>
+                <div class="journey-entry">
+                    <p class="journey-date">2021 NOV</p>
+                    <p class="journey-activity">Successfully completed the UiPath Advanced certification</p>
+                    <div class="journey_easteregg"></div>
+                </div>
+
+
 
             </div>
         </div>
@@ -1707,22 +1847,22 @@
             <p>Want to talk or work together?</p>
 
             <form action="https://uennqk38zi.execute-api.ap-southeast-2.amazonaws.com/dev/static-site-mailer" method="POST">
-                <label class="form-field">
+                <label class="form-field1">
                     
-                    <input class="form-input" type="text" name="name" placeholder="Name" required>
+                    <input class="form-input1" type="text" name="name" placeholder="Name" required>
                 </label>
-                <label class="form-field">
+                <label class="form-field1">
                     
-                    <input class="form-input" type="email" name="reply_to" placeholder="Enter email" required>
+                    <input class="form-input1" type="email" name="reply_to" placeholder="Enter email" required>
                 </label>
-                <label class="form-field">
+                <label class="form-field1">
                     
-                    <textarea class="form-input" name="message" placeholder="Message" required></textarea>
+                    <textarea class="form-input1" name="message" placeholder="Message" required></textarea>
                 </label>
-                <button class="btn submit-btn" type="submit">SUBMIT</button>
+                <button class="btn submit1-btn" type="submit">SUBMIT</button>
             </form>
 
-            <p id="js-form-response"></p>
+            <p id="response-js-form"></p>
         </div>
     </section>
     <footer class="grass">

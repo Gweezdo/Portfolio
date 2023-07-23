@@ -115,6 +115,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     #start-btn{
         top: 300px;
+        scale: 1.0;
     }
 
     /*********************************
@@ -430,7 +431,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-bottom: 90px;
     }
 
-    .form-input{
+    .form-input1{
         width: 90%;
     }
 
@@ -459,12 +460,12 @@ and (-webkit-min-device-pixel-ratio: 1) {
         transform: scale(0.8);
     } 
 
-    .submit-btn{
+    .submit1-btn{
         left: calc(50% - 202px/2);
         float: none;
     }
 
-    #js-form-response{
+    #response-js-form{
         /* height: 200px; */
         margin: 30px 0;
         /* float: none; */

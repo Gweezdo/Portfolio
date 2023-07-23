@@ -280,6 +280,9 @@ var jqueryCardList = document.querySelectorAll(".jquery-card");
 var reactCardList = document.querySelectorAll(".react-card");
 var reduxCardList = document.querySelectorAll(".redux-card");
 var sassCardList = document.querySelectorAll(".sass-card");
+var uipathCardList = document.querySelectorAll(".uipath-card");
+var sqlCardList = document.querySelectorAll(".sql-card");
+var powerappsCardList = document.querySelectorAll(".power-apps-card");
 
 var allLinks = document.querySelectorAll(".nav-link-sect2")
 
@@ -291,6 +294,9 @@ var jqueryNav = document.getElementById("jquery-nav");
 var reactNav = document.getElementById("react-nav");
 var reduxNav = document.getElementById("redux-nav");
 var sassNav = document.getElementById("sass-nav");
+var uipathNav = document.getElementById("uipath-nav");
+var sqlNav = document.getElementById("sql-nav");
+var powerAppsNav = document.getElementById("power-apps-nav");
 var mobileScreen = window.matchMedia("(max-device-width: 768px)");
 
 /*************************************
@@ -413,6 +419,36 @@ sassNav.addEventListener("click", function () {
     displayNone(s2Nav);
   } else {
     func3(sassCardList);
+  }
+});
+uipathNav.addEventListener("click", function () {
+  if (mobileScreen.matches) {
+    func3(uipathCardList);
+    assignText(dropDownBtn, uipathNav);
+    displayLinks(uipathNav, allLinks);
+    displayNone(s2Nav);
+  } else {
+    func3(uipathCardList);
+  }
+});
+sqlNav.addEventListener("click", function () {
+  if (mobileScreen.matches) {
+    func3(sqlCardList);
+    assignText(dropDownBtn, sqlNav);
+    displayLinks(sqlNav, allLinks);
+    displayNone(s2Nav);
+  } else {
+    func3(sqlCardList);
+  }
+});
+powerAppsNav.addEventListener("click", function () {
+  if (mobileScreen.matches) {
+    func3(powerappsCardList);
+    assignText(dropDownBtn, powerAppsNav);
+    displayLinks(powerAppsNav, allLinks);
+    displayNone(s2Nav);
+  } else {
+    func3(powerappsCardList);
   }
 });
 
@@ -577,7 +613,7 @@ function showSlides() {
 
 (() => {
   const form = document.querySelector("form");
-  const formResponse = document.querySelector("#js-form-response");
+  const formResponse = document.querySelector("#response-js-form");
 
   form.onsubmit = (e) => {
     e.preventDefault();

@@ -7,6 +7,11 @@
     display: block;
 }
 
+#blackbook-projects{
+    display: none;
+    /* display: block; */
+}
+
 #catalyst-browser-modal{
     display: none;
     /* display: block; */
@@ -125,7 +130,8 @@
     left:calc(50% - 600px/2);
     top: calc(50% - 657px/2);
     opacity: 1;
-    font-family: ArcadeClassic;
+    /* font-family: ArcadeClassic; */
+    font-family: RobottoMono;
     /* overflow: hidden; */
     color: #FFFFFF;
 }
@@ -243,14 +249,14 @@
     height: 80px;
     margin: 0 32px;
     /* background: red; */
-    font-family: ArcadeClassic;
+    font-family: RobottoMono;
     font-style: normal;
     font-weight: normal;
 }
 
 .modal-btn{
     position: relative;
-    font-family: ArcadeClassic;
+    font-family: RobottoMono;
     font-style: normal;
     font-weight: normal;
     text-align: center;
